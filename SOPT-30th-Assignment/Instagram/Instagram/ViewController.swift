@@ -1,4 +1,3 @@
-//#imageLiteral(resourceName: "password_hidden_eye_icon.png")#imageLiteral(resourceName: "password_hidden_eye_icon2x.png")#imageLiteral(resourceName: "password_hidden_eye_icon3x.png")
 //  ViewController.swift
 //  Instagram
 //
@@ -9,6 +8,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
@@ -26,7 +26,12 @@ class ViewController: UIViewController {
         
         loginButton.layer.cornerRadius = 5
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC = segue.destination as? LoginConfirmController else { return }
+        
+        nextVC.name = nameTextField.text
+    }
 
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */; };
 		CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */; };
 		CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8A27FC9A8E00754F0E /* SceneDelegate.swift */; };
 		CECC5E8D27FC9A8E00754F0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8C27FC9A8E00754F0E /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfirmController.swift; sourceTree = "<group>"; };
 		CECC5E8527FC9A8E00754F0E /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECC5E8A27FC9A8E00754F0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				CECC5E9327FC9A8E00754F0E /* LaunchScreen.storyboard */,
 				CECC5E9627FC9A8E00754F0E /* Info.plist */,
 				CEFE640127FCA42F00395565 /* Extensions.swift */,
+				CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECC5E8D27FC9A8E00754F0E /* ViewController.swift in Sources */,
+				CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
 				CEFE640227FCA42F00395565 /* Extensions.swift in Sources */,

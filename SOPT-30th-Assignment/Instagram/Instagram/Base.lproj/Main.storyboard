@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="65" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -60,6 +61,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="로그인">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ARb-Ru-n5t" kind="presentation" modalPresentationStyle="fullScreen" id="2fJ-yO-t7j"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AQT-Wg-rvl">
                                 <rect key="frame" x="111.5" y="561" width="191.5" height="32"/>
@@ -102,12 +106,28 @@
                     <connections>
                         <outlet property="forgotPasswordButton" destination="p7C-7q-GVw" id="LnS-Kh-UX8"/>
                         <outlet property="loginButton" destination="SRm-5x-kEW" id="qS3-x0-uYZ"/>
+                        <outlet property="nameTextField" destination="DpR-SX-3VD" id="aiq-JV-5Ew"/>
                         <outlet property="passwordTextField" destination="K4P-6Z-u4S" id="Qy4-mI-UBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="122.54464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cho-d0-7NF">
+            <objects>
+                <viewController id="ybO-CO-s5a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsd-hB-S4I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZxT-VM-dv0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TiH-p7-Gmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MWi-Cr-9Jf">
@@ -127,9 +147,69 @@
             </objects>
             <point key="canvasLocation" x="-199" y="123"/>
         </scene>
+        <!--Login Confirm Controller-->
+        <scene sceneID="RqD-v0-qDB">
+            <objects>
+                <viewController storyboardIdentifier="LoginConfirmController" id="ARb-Ru-n5t" customClass="LoginConfirmController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nl-1u-Qgz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-Ac-kho">
+                                <rect key="frame" x="20" y="382.5" width="374" height="131"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX님 Instagram에 오신 것을 환영합니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-SQ-RlA">
+                                        <rect key="frame" x="19" y="0.0" width="336" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 이름을 변경할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f1-3k-EQ5">
+                                        <rect key="frame" x="26.5" y="44" width="321.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-Rg-Ahx">
+                                        <rect key="frame" x="10" y="81" width="354" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wg0-Va-ttX"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="완료하기"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="E0s-Rg-Ahx" firstAttribute="leading" secondItem="9uO-Ac-kho" secondAttribute="leading" constant="10" id="5GW-FL-OoD"/>
+                                    <constraint firstAttribute="trailing" secondItem="E0s-Rg-Ahx" secondAttribute="trailing" constant="10" id="vCt-YH-r18"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pa4-Bx-W3d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="centerX" secondItem="6nl-1u-Qgz" secondAttribute="centerX" id="47G-Na-FiX"/>
+                            <constraint firstItem="pa4-Bx-W3d" firstAttribute="trailing" secondItem="9uO-Ac-kho" secondAttribute="trailing" constant="20" id="az7-0e-ndZ"/>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="leading" secondItem="pa4-Bx-W3d" secondAttribute="leading" constant="20" id="eiu-CT-Wqv"/>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="centerY" secondItem="6nl-1u-Qgz" secondAttribute="centerY" id="tZa-Mo-F1S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="uJf-SQ-RlA" id="06p-4g-rA0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooj-iV-vCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3988" y="680"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Instagram_Black_Logo" width="175" height="50"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -138,6 +218,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
