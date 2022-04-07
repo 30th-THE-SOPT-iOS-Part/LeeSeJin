@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LoginConfirmController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -14,7 +15,6 @@ class LoginConfirmController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setName()
     }
     
@@ -24,5 +24,13 @@ class LoginConfirmController: UIViewController {
             welcomeLabel.text = "\(name)님 \n Instagram에 오신 것을 환영합니다"
             welcomeLabel.sizeToFit()
         }
+    }
+    
+    @IBAction func confirmButtonDidTap(_ sender: UIButton) {
+        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+        dismiss(animated: true) {
+            presentingVC.popToRootViewController(animated: true)
+        }
+
     }
 }

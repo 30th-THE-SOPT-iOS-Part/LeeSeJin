@@ -21,4 +21,6 @@ class PasswordRegistrationController: UIViewController {
             nextVC.name = name
         }
     }
+    
 }
+

@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = 5
-       // navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
