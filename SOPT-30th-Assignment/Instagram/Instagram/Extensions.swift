@@ -8,6 +8,7 @@
 import UIKit
 
 extension UITextField {
+    
     func setIcon(_ image: UIImage) {
         let iconButton = UIButton(frame: CGRect(x: 0, y: 5, width: 20, height: 20))
         iconButton.setImage(image, for: .normal)
@@ -21,7 +22,10 @@ extension UITextField {
         rightViewMode = .always
     }
     
-    @objc func handleIconTapped() {
-        print("DEBUG: Handle button Tapped")
+    @objc func handleIconTapped(_ sender: UIButton) {
+        isSecureTextEntry ? sender.setImage(#imageLiteral(resourceName: "password_hidden_eye_icon"), for: .normal) : sender.setImage(#imageLiteral(resourceName: "password_shown_eye_icon"), for: .normal)
+
+        isSecureTextEntry = !isSecureTextEntry
+
     }
 }

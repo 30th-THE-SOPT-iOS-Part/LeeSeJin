@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         nameTextField.clearButtonMode = .whileEditing
-        passwordTextField.setIcon(#imageLiteral(resourceName: "password_hidden_eye_icon"))
+        passwordTextField.setIcon(#imageLiteral(resourceName: "password_shown_eye_icon"))
         
         nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
