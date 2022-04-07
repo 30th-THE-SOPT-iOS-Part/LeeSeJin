@@ -10,12 +10,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField! {
-        didSet {
-            passwordTextField.setIcon(#imageLiteral(resourceName: "password_hidden_eye_icon"))
-        }
-    }
-    
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var forgotPasswordButton: UIButton!
 
     
@@ -24,7 +19,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameTextField.clearButtonMode = .whileEditing
+        passwordTextField.setIcon(#imageLiteral(resourceName: "password_hidden_eye_icon"))
+        
+        nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
+        
+        loginButton.isEnabled = false
         loginButton.layer.cornerRadius = 5
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,6 +35,19 @@ class ViewController: UIViewController {
         
         nextVC.name = nameTextField.text
     }
+    
+    @objc func handleTextChange() {
+        if let nameText = nameTextField.text{
+            if let passwordText = passwordTextField.text {
+                if nameText.isEmpty || passwordText.isEmpty {
+                    loginButton.isEnabled = false
+                } else {
+                    loginButton.isEnabled = true
+                }
+            }
+        }
+    }
 
 }
+
 

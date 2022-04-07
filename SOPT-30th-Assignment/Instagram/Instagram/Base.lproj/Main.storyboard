@@ -188,6 +188,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameRegisterTextField" destination="jve-og-Bp5" id="DbH-Vq-7j9"/>
+                        <outlet property="nextButton" destination="g7y-bd-wyQ" id="yLI-vq-meE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TiH-p7-Gmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -341,6 +342,10 @@
                     <navigationItem key="navigationItem" id="SLI-Cq-vzl">
                         <barButtonItem key="backBarButtonItem" title=" " id="Jky-v2-0aJ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="q2m-Ly-buQ" id="E7g-PC-YOS"/>
+                        <outlet property="passwordTextField" destination="lxG-i5-W6u" id="WDb-ZT-WrH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efc-O1-EXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

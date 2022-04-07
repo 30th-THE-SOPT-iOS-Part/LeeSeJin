@@ -10,11 +10,13 @@ import UIKit
 class NameRegistrationController: UIViewController {
     
     @IBOutlet weak var nameRegisterTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        nextButton.isEnabled = false
+        nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,4 +25,14 @@ class NameRegistrationController: UIViewController {
         nextVC.name = nameRegisterTextField.text
     }
     
+    
+    @objc func handleTextChange() {
+        if let nameText = nameRegisterTextField.text {
+            if nameText.isEmpty {
+                nextButton.isEnabled = false
+            } else {
+                nextButton.isEnabled = true
+            }
+        }
+    }
 }
