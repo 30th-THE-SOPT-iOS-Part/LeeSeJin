@@ -319,7 +319,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="ARb-Ru-n5t" kind="presentation" modalPresentationStyle="fullScreen" id="ofm-79-DXB"/>
+                                            <action selector="nextButtonDidTap:" destination="OXR-r7-p7i" eventType="touchUpInside" id="EVI-l9-D4q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -352,9 +352,6 @@
             <point key="canvasLocation" x="3019" y="123"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="2fJ-yO-t7j"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Instagram_Black_Logo" width="175" height="50"/>
         <image name="icn_black_24" width="24.5" height="24"/>

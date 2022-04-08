@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         
-        loginButton.isEnabled = false
+        loginButton.disable()
         loginButton.layer.cornerRadius = 5
 
     }
@@ -40,9 +40,9 @@ class ViewController: UIViewController {
         if let nameText = nameTextField.text{
             if let passwordText = passwordTextField.text {
                 if nameText.isEmpty || passwordText.isEmpty {
-                    loginButton.isEnabled = false
+                    loginButton.disable()
                 } else {
-                    loginButton.isEnabled = true
+                    loginButton.enable()
                 }
             }
         }

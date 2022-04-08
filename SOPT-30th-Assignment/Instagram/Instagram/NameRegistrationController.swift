@@ -15,7 +15,7 @@ class NameRegistrationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nextButton.isEnabled = false
+        nextButton.disable()
         nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
 
@@ -25,13 +25,14 @@ class NameRegistrationController: UIViewController {
         nextVC.name = nameRegisterTextField.text
     }
     
+
     
     @objc func handleTextChange() {
         if let nameText = nameRegisterTextField.text {
             if nameText.isEmpty {
-                nextButton.isEnabled = false
+                nextButton.disable()
             } else {
-                nextButton.isEnabled = true
+                nextButton.enable()
             }
         }
     }

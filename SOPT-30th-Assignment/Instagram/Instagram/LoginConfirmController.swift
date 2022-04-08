@@ -27,10 +27,6 @@ class LoginConfirmController: UIViewController {
     }
     
     @IBAction func confirmButtonDidTap(_ sender: UIButton) {
-        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
-        dismiss(animated: true) {
-            presentingVC.popToRootViewController(animated: true)
-        }
-
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -18,8 +18,19 @@ class PasswordRegistrationController: UIViewController {
         super.viewDidLoad()
         
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
-        nextButton.isEnabled = false
+        nextButton.disable()
     }
+    
+    @IBAction func nextButtonDidTap(_ sender: Any) {
+        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "LoginConfirmController") as? LoginConfirmController else { return }
+        
+        nextVC.name = name
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextVC = segue.destination as? LoginConfirmController else { return }
@@ -31,9 +42,9 @@ class PasswordRegistrationController: UIViewController {
     @objc func handleTextChange() {
         if let passwordText = passwordTextField.text {
             if passwordText.isEmpty {
-                nextButton.isEnabled = false
+                nextButton.disable()
             } else {
-                nextButton.isEnabled = true
+                nextButton.enable()
             }
         }
     }

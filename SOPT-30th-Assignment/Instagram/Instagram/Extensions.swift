@@ -29,3 +29,15 @@ extension UITextField {
 
     }
 }
+
+extension UIButton {
+    func enable() {
+        isEnabled = true
+        backgroundColor = .link
+    }
+    
+    func disable() {
+        isEnabled = false
+        backgroundColor = .lightGray
+    }
+}
