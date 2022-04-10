@@ -16,9 +16,12 @@ class PasswordRegistrationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUI()
+    }
+    
+    func setUI() {
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
-        nextButton.disable()
+        nextButton.setEnableStatus(enabled: false)
     }
     
     @IBAction func nextButtonDidTap(_ sender: Any) {
@@ -40,13 +43,7 @@ class PasswordRegistrationController: UIViewController {
     }
     
     @objc func handleTextChange() {
-        if let passwordText = passwordTextField.text {
-            if passwordText.isEmpty {
-                nextButton.disable()
-            } else {
-                nextButton.enable()
-            }
-        }
+        nextButton.setEnableStatus(enabled: passwordTextField.hasText)
     }
 }
 

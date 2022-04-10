@@ -18,17 +18,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUI()
+    }
+    
+    func setUI() {
         nameTextField.clearButtonMode = .whileEditing
         passwordTextField.setIcon(#imageLiteral(resourceName: "password_shown_eye_icon"))
         
         nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         
-        loginButton.disable()
+        loginButton.setEnableStatus(enabled: false)
         loginButton.layer.cornerRadius = 5
-
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextVC = segue.destination as? LoginConfirmController else { return }
@@ -40,9 +43,9 @@ class ViewController: UIViewController {
         if let nameText = nameTextField.text{
             if let passwordText = passwordTextField.text {
                 if nameText.isEmpty || passwordText.isEmpty {
-                    loginButton.disable()
+                    loginButton.setEnableStatus(enabled: false)
                 } else {
-                    loginButton.enable()
+                    loginButton.setEnableStatus(enabled: true)
                 }
             }
         }

@@ -30,3 +30,4 @@ class LoginConfirmController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
+

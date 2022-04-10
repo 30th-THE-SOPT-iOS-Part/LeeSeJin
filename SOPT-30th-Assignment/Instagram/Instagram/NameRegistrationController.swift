@@ -14,11 +14,15 @@ class NameRegistrationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nextButton.disable()
-        nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
+        setUI()
     }
 
+    func setUI() {
+        nextButton.setEnableStatus(enabled: false)
+        nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextVC = segue.destination as? PasswordRegistrationController else { return }
         
@@ -28,12 +32,6 @@ class NameRegistrationController: UIViewController {
 
     
     @objc func handleTextChange() {
-        if let nameText = nameRegisterTextField.text {
-            if nameText.isEmpty {
-                nextButton.disable()
-            } else {
-                nextButton.enable()
-            }
-        }
+        nextButton.setEnableStatus(enabled: nameRegisterTextField.hasText)
     }
 }
