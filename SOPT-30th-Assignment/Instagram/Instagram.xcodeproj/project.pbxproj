@@ -16,6 +16,7 @@
 		CE99D5B32805709000631200 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99D5B22805709000631200 /* Registration.storyboard */; };
 		CE99D5B5280572C900631200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5B4280572C900631200 /* ViewController.swift */; };
 		CE99D5B82805755300631200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99D5B72805755300631200 /* Main.storyboard */; };
+		CE99D5BB28059F1900631200 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5BA28059F1900631200 /* Color.swift */; };
 		CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */; };
 		CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */; };
 		CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8A27FC9A8E00754F0E /* SceneDelegate.swift */; };
@@ -23,7 +24,7 @@
 		CECC5E9027FC9A8E00754F0E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECC5E8E27FC9A8E00754F0E /* Login.storyboard */; };
 		CECC5E9227FC9A8E00754F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECC5E9127FC9A8E00754F0E /* Assets.xcassets */; };
 		CECC5E9527FC9A8E00754F0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECC5E9327FC9A8E00754F0E /* LaunchScreen.storyboard */; };
-		CEFE640227FCA42F00395565 /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE640127FCA42F00395565 /* UIView++.swift */; };
+		CEFE640227FCA42F00395565 /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE640127FCA42F00395565 /* UIButton++.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CE99D5B22805709000631200 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		CE99D5B4280572C900631200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE99D5B72805755300631200 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE99D5BA28059F1900631200 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfirmController.swift; sourceTree = "<group>"; };
 		CECC5E8527FC9A8E00754F0E /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		CECC5E9127FC9A8E00754F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CECC5E9427FC9A8E00754F0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECC5E9627FC9A8E00754F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEFE640127FCA42F00395565 /* UIView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++.swift"; sourceTree = "<group>"; };
+		CEFE640127FCA42F00395565 /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 		CE99D5A6280569C300631200 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CEFE640127FCA42F00395565 /* UIView++.swift */,
+				CEFE640127FCA42F00395565 /* UIButton++.swift */,
 				CE99D5A828056A6900631200 /* UITextField++.swift */,
 			);
 			path = Extensions;
@@ -95,6 +97,7 @@
 				CE99D5AD28056D1700631200 /* Image.swift */,
 				CE99D5AF28056DBA00631200 /* Storyboard.swift */,
 				CE99D5B4280572C900631200 /* ViewController.swift */,
+				CE99D5BA28059F1900631200 /* Color.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -233,12 +236,13 @@
 				CE99D5B028056DBA00631200 /* Storyboard.swift in Sources */,
 				CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */,
 				CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */,
+				CE99D5BB28059F1900631200 /* Color.swift in Sources */,
 				CE99D5A928056A6900631200 /* UITextField++.swift in Sources */,
 				CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */,
 				CE99D5B5280572C900631200 /* ViewController.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
-				CEFE640227FCA42F00395565 /* UIView++.swift in Sources */,
+				CEFE640227FCA42F00395565 /* UIButton++.swift in Sources */,
 				CE99D5AB28056AC800631200 /* Const.swift in Sources */,
 				CE99D5AE28056D1700631200 /* Image.swift in Sources */,
 			);

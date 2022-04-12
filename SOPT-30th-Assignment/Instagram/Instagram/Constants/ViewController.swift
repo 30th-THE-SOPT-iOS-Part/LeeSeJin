@@ -11,7 +11,7 @@ extension Const {
     
     struct ViewController {
         //Auth
-        
+        static let LoginViewController = "LoginViewController"
         static let NameRegistrationController = "NameRegistrationController"
         static let PasswordRegistrationController = "PasswordRegistrationController"
         static let LoginConfirmController = "LoginConfirmController"
