@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="ybO-CO-s5a" kind="show" id="DMb-FE-OeQ"/>
+                                            <action selector="signupButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9L-gv-ZLt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,82 +119,6 @@
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="122.54464285714285"/>
         </scene>
-        <!--Name Registration Controller-->
-        <scene sceneID="cho-d0-7NF">
-            <objects>
-                <viewController storyboardIdentifier="NameRegistration" id="ybO-CO-s5a" customClass="NameRegistrationController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsd-hB-S4I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iha-0Y-VvR">
-                                <rect key="frame" x="20" y="108" width="374" height="267"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-PS-1Cc">
-                                        <rect key="frame" x="76.5" y="0.0" width="221" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="One-em-NmL">
-                                        <rect key="frame" x="15" y="66" width="344" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jve-og-Bp5">
-                                        <rect key="frame" x="0.0" y="137" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MYE-Rn-3ZJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7y-bd-wyQ">
-                                        <rect key="frame" x="0.0" y="217" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="HjX-Sg-lGU"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="다음">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="OXR-r7-p7i" kind="show" id="odc-1f-w2h"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="g7y-bd-wyQ" firstAttribute="leading" secondItem="iha-0Y-VvR" secondAttribute="leading" id="1N3-M9-sgA"/>
-                                    <constraint firstAttribute="trailing" secondItem="g7y-bd-wyQ" secondAttribute="trailing" id="6Xe-oS-OQy"/>
-                                    <constraint firstAttribute="trailing" secondItem="jve-og-Bp5" secondAttribute="trailing" id="9gz-zd-ka8"/>
-                                    <constraint firstItem="jve-og-Bp5" firstAttribute="leading" secondItem="iha-0Y-VvR" secondAttribute="leading" id="juy-Va-Ja8"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZxT-VM-dv0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="iha-0Y-VvR" firstAttribute="leading" secondItem="ZxT-VM-dv0" secondAttribute="leading" constant="20" id="hFB-fb-6rE"/>
-                            <constraint firstAttribute="trailing" secondItem="iha-0Y-VvR" secondAttribute="trailing" constant="20" id="tOa-C7-6iW"/>
-                            <constraint firstItem="iha-0Y-VvR" firstAttribute="top" secondItem="ZxT-VM-dv0" secondAttribute="top" constant="20" id="zGU-CC-dbY"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="U0T-ZD-6L9">
-                        <barButtonItem key="backBarButtonItem" title=" " id="hfk-Bf-RwJ"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="nameRegisterTextField" destination="jve-og-Bp5" id="DbH-Vq-7j9"/>
-                        <outlet property="nextButton" destination="g7y-bd-wyQ" id="yLI-vq-meE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TiH-p7-Gmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2010" y="123"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="MWi-Cr-9Jf">
             <objects>
@@ -216,7 +140,7 @@
         <!--Login Confirm Controller-->
         <scene sceneID="RqD-v0-qDB">
             <objects>
-                <viewController storyboardIdentifier="LoginConfirm" id="ARb-Ru-n5t" customClass="LoginConfirmController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginConfirmController" id="ARb-Ru-n5t" customClass="LoginConfirmController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nl-1u-Qgz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,82 +198,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooj-iV-vCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1458" y="1027"/>
-        </scene>
-        <!--Password Registration Controller-->
-        <scene sceneID="YWl-8N-IVz">
-            <objects>
-                <viewController storyboardIdentifier="PasswordRegistration" id="OXR-r7-p7i" customClass="PasswordRegistrationController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u9J-vM-kaX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fbW-zO-X2i">
-                                <rect key="frame" x="20" y="108" width="374" height="267"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51g-y7-zmu">
-                                        <rect key="frame" x="93" y="0.0" width="188.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 저장할 수 있으므로 iCloud® 기기에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2n-KI-87Z">
-                                        <rect key="frame" x="19" y="66" width="336" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lxG-i5-W6u">
-                                        <rect key="frame" x="0.0" y="137" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ERj-0l-VBn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2m-Ly-buQ">
-                                        <rect key="frame" x="0.0" y="217" width="374" height="50"/>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Kn1-bJ-UHn"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="다음">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="nextButtonDidTap:" destination="OXR-r7-p7i" eventType="touchUpInside" id="EVI-l9-D4q"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="lxG-i5-W6u" firstAttribute="leading" secondItem="fbW-zO-X2i" secondAttribute="leading" id="1h8-h2-ISE"/>
-                                    <constraint firstAttribute="trailing" secondItem="lxG-i5-W6u" secondAttribute="trailing" id="IRh-vh-eef"/>
-                                    <constraint firstItem="q2m-Ly-buQ" firstAttribute="leading" secondItem="fbW-zO-X2i" secondAttribute="leading" id="O0O-O7-eK1"/>
-                                    <constraint firstAttribute="trailing" secondItem="q2m-Ly-buQ" secondAttribute="trailing" id="eyj-Th-tjr"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SWp-R5-KKd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="fbW-zO-X2i" firstAttribute="leading" secondItem="SWp-R5-KKd" secondAttribute="leading" constant="20" id="U6L-Jd-70s"/>
-                            <constraint firstItem="fbW-zO-X2i" firstAttribute="top" secondItem="SWp-R5-KKd" secondAttribute="top" constant="20" id="d7O-wY-yVo"/>
-                            <constraint firstAttribute="trailing" secondItem="fbW-zO-X2i" secondAttribute="trailing" constant="20" id="yJV-JJ-S6E"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="SLI-Cq-vzl">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Jky-v2-0aJ"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="nextButton" destination="q2m-Ly-buQ" id="E7g-PC-YOS"/>
-                        <outlet property="passwordTextField" destination="lxG-i5-W6u" id="WDb-ZT-WrH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Efc-O1-EXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3019" y="123"/>
         </scene>
     </scenes>
     <resources>

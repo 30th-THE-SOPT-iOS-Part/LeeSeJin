@@ -6,21 +6,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-
-    
     @IBOutlet weak var loginButton: UIButton!
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
     }
     
+    //MARK: - Helpers
     func setUI() {
         nameTextField.clearButtonMode = .whileEditing
         passwordTextField.setIcon(Const.Image.password_shown)
@@ -39,6 +38,8 @@ class ViewController: UIViewController {
         nextVC.name = nameTextField.text
     }
     
+    
+    //MARK: - Actions
     @objc func handleTextChange() {
         if let nameText = nameTextField.text{
             if let passwordText = passwordTextField.text {
@@ -51,6 +52,14 @@ class ViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func signupButtonDidTap(_ sender: UIButton) {
+        guard let registrationController = UIStoryboard(name: Const.Storyboard.Registration, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.NameRegistrationController) as? NameRegistrationController else { return }
+        
+        self.navigationController?.pushViewController(registrationController, animated: true)
+        
+    }
+    
 }
 
 

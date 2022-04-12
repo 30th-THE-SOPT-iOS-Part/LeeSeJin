@@ -11,8 +11,8 @@ extension Const {
     
     struct Storyboard {
         //Auth
-        
-        static let LoginConfirm = "LoginConfirm"
+        static let Registration = "Registration"
+        static let Login = "Login"
     }
     
 }
