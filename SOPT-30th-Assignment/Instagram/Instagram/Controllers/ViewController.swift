@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     func setUI() {
         nameTextField.clearButtonMode = .whileEditing
-        passwordTextField.setIcon(#imageLiteral(resourceName: "password_shown_eye_icon"))
+        passwordTextField.setIcon(Const.Image.password_shown)
         
         nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)

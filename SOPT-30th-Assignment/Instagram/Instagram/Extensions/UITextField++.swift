@@ -1,15 +1,17 @@
 //
-//  Extensions.swift
+//  UITextField++.swift
 //  Instagram
 //
-//  Created by User on 2022/04/06.
+//  Created by User on 2022/04/12.
 //
 
 import UIKit
 
 extension UITextField {
     
-    func setIcon(_ image: UIImage) {
+    func setIcon(_ image: UIImage?) {
+        guard let image = image else { return }
+
         let iconButton = UIButton(frame: CGRect(x: 0, y: 5, width: 20, height: 20))
         iconButton.setImage(image, for: .normal)
         iconButton.addTarget(self, action: #selector(handleIconTapped), for: .touchUpInside)
@@ -23,18 +25,9 @@ extension UITextField {
     }
     
     @objc func handleIconTapped(_ sender: UIButton) {
-        isSecureTextEntry ? sender.setImage(#imageLiteral(resourceName: "password_hidden_eye_icon"), for: .normal) : sender.setImage(#imageLiteral(resourceName: "password_shown_eye_icon"), for: .normal)
+        isSecureTextEntry ? sender.setImage(Const.Image.password_hidden, for: .normal) : sender.setImage(Const.Image.password_shown, for: .normal)
 
         isSecureTextEntry = !isSecureTextEntry
 
-    }
-}
-
-extension UIButton {
-    
-    func setEnableStatus(enabled: Bool) {
-        isEnabled = enabled
-        if isEnabled { backgroundColor = .link }
-        else { backgroundColor = .lightGray }
     }
 }

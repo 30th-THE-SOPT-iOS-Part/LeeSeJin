@@ -122,7 +122,7 @@
         <!--Name Registration Controller-->
         <scene sceneID="cho-d0-7NF">
             <objects>
-                <viewController storyboardIdentifier="NameRegistrationController" id="ybO-CO-s5a" customClass="NameRegistrationController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameRegistration" id="ybO-CO-s5a" customClass="NameRegistrationController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsd-hB-S4I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +216,7 @@
         <!--Login Confirm Controller-->
         <scene sceneID="RqD-v0-qDB">
             <objects>
-                <viewController storyboardIdentifier="LoginConfirmController" id="ARb-Ru-n5t" customClass="LoginConfirmController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginConfirm" id="ARb-Ru-n5t" customClass="LoginConfirmController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nl-1u-Qgz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,7 +278,7 @@
         <!--Password Registration Controller-->
         <scene sceneID="YWl-8N-IVz">
             <objects>
-                <viewController storyboardIdentifier="PasswordRegistrationController" id="OXR-r7-p7i" customClass="PasswordRegistrationController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordRegistration" id="OXR-r7-p7i" customClass="PasswordRegistrationController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9J-vM-kaX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

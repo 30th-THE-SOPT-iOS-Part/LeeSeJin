@@ -25,7 +25,7 @@ class PasswordRegistrationController: UIViewController {
     }
     
     @IBAction func nextButtonDidTap(_ sender: Any) {
-        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "LoginConfirmController") as? LoginConfirmController else { return }
+        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: Const.Storyboard.LoginConfirm) as? LoginConfirmController else { return }
         
         nextVC.name = name
         nextVC.modalPresentationStyle = .fullScreen
