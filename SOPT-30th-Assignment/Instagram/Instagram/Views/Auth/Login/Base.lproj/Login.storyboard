@@ -61,7 +61,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="ARb-Ru-n5t" kind="presentation" modalPresentationStyle="fullScreen" id="2fJ-yO-t7j"/>
@@ -144,26 +144,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-Ac-kho">
-                                <rect key="frame" x="20" y="328.66666666666669" width="335" height="155"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-Ac-kho">
+                                <rect key="frame" x="34" y="327.33333333333331" width="307" height="157.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX님 Instagram에 오신 것을 환영합니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-SQ-RlA">
-                                        <rect key="frame" x="62.666666666666686" y="0.0" width="210" height="48"/>
+                                        <rect key="frame" x="48.666666666666686" y="0.0" width="210" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 이름을 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f1-3k-EQ5">
-                                        <rect key="frame" x="7" y="68" width="321.33333333333331" height="17"/>
+                                        <rect key="frame" x="27" y="64" width="253" height="33.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-Rg-Ahx">
-                                        <rect key="frame" x="10" y="105" width="315" height="50"/>
+                                        <rect key="frame" x="0.0" y="113.66666666666669" width="307" height="44"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="wg0-Va-ttX"/>
+                                            <constraint firstAttribute="height" constant="44" id="wg0-Va-ttX"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -176,21 +176,31 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="E0s-Rg-Ahx" firstAttribute="leading" secondItem="9uO-Ac-kho" secondAttribute="leading" constant="10" id="5GW-FL-OoD"/>
-                                    <constraint firstAttribute="trailing" secondItem="E0s-Rg-Ahx" secondAttribute="trailing" constant="10" id="vCt-YH-r18"/>
+                                    <constraint firstItem="E0s-Rg-Ahx" firstAttribute="leading" secondItem="9uO-Ac-kho" secondAttribute="leading" id="5GW-FL-OoD"/>
+                                    <constraint firstAttribute="trailing" secondItem="E0s-Rg-Ahx" secondAttribute="trailing" id="vCt-YH-r18"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcJ-HK-gOv">
+                                <rect key="frame" x="95.333333333333329" y="502.99999999999994" width="184.66666666666669" height="33.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pa4-Bx-W3d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9uO-Ac-kho" firstAttribute="centerX" secondItem="6nl-1u-Qgz" secondAttribute="centerX" id="47G-Na-FiX"/>
-                            <constraint firstItem="pa4-Bx-W3d" firstAttribute="trailing" secondItem="9uO-Ac-kho" secondAttribute="trailing" constant="20" id="az7-0e-ndZ"/>
-                            <constraint firstItem="9uO-Ac-kho" firstAttribute="leading" secondItem="pa4-Bx-W3d" secondAttribute="leading" constant="20" id="eiu-CT-Wqv"/>
+                            <constraint firstItem="UcJ-HK-gOv" firstAttribute="centerX" secondItem="6nl-1u-Qgz" secondAttribute="centerX" id="7wd-xj-CgR"/>
+                            <constraint firstItem="UcJ-HK-gOv" firstAttribute="top" secondItem="9uO-Ac-kho" secondAttribute="bottom" constant="18" id="Sc4-ck-Ml0"/>
+                            <constraint firstItem="pa4-Bx-W3d" firstAttribute="trailing" secondItem="9uO-Ac-kho" secondAttribute="trailing" constant="34" id="az7-0e-ndZ"/>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="leading" secondItem="pa4-Bx-W3d" secondAttribute="leading" constant="34" id="eiu-CT-Wqv"/>
                             <constraint firstItem="9uO-Ac-kho" firstAttribute="centerY" secondItem="6nl-1u-Qgz" secondAttribute="centerY" id="tZa-Mo-F1S"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmButton" destination="E0s-Rg-Ahx" id="X3T-AK-o1W"/>
                         <outlet property="welcomeLabel" destination="uJf-SQ-RlA" id="06p-4g-rA0"/>
                     </connections>
                 </viewController>

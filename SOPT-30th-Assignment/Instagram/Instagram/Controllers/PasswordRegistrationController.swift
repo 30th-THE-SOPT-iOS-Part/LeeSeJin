@@ -21,8 +21,11 @@ class PasswordRegistrationController: UIViewController {
     
     //MARK: - Helpers
     func setUI() {
-        passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         nextButton.setEnableStatus(enabled: false)
+        nextButton.layer.cornerRadius = 5
+        
+        passwordTextField.setIcon(Const.Image.password_shown, for: .password_toggle)
+        passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     
     //MARK: - Actions

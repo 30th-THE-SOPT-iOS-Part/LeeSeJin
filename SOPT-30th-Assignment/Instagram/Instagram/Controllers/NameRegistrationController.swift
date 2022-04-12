@@ -21,6 +21,9 @@ class NameRegistrationController: UIViewController {
     //MARK: - Helpers
     func setUI() {
         nextButton.setEnableStatus(enabled: false)
+        nextButton.layer.cornerRadius = 5
+
+        
         nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     

@@ -11,6 +11,7 @@ import UIKit
 class LoginConfirmController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var confirmButton: UIButton!
     var name: String?
     
     //MARK: - Lifecycle
@@ -25,6 +26,8 @@ class LoginConfirmController: UIViewController {
             welcomeLabel.text = "\(name)님 \n Instagram에 오신 것을 환영합니다"
             welcomeLabel.sizeToFit()
         }
+        confirmButton.layer.cornerRadius = 5
+
     }
     
     //MARK: - Actions
