@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE829F312806EC3000B32953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE829F302806EC3000B32953 /* MainViewController.swift */; };
 		CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */; };
 		CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */; };
 		CE99D5A928056A6900631200 /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5A828056A6900631200 /* UITextField++.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE829F302806EC3000B32953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistrationController.swift; sourceTree = "<group>"; };
 		CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationController.swift; sourceTree = "<group>"; };
 		CE99D5A828056A6900631200 /* UITextField++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField++.swift"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		CE99D5A5280569BE00631200 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEC690DC28071B3A0085BC7D /* TabBar */,
 				CE99D5B9280575A700631200 /* Auth */,
 				CE99D5B72805755300631200 /* Main.storyboard */,
 			);
@@ -86,6 +89,7 @@
 				CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */,
 				CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */,
 				CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */,
+				CE829F302806EC3000B32953 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +129,13 @@
 				CE99D5B12805701B00631200 /* Registration */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		CEC690DC28071B3A0085BC7D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		CECC5E7C27FC9A8E00754F0E = {
@@ -239,6 +250,7 @@
 				CE99D5BB28059F1900631200 /* Color.swift in Sources */,
 				CE99D5A928056A6900631200 /* UITextField++.swift in Sources */,
 				CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */,
+				CE829F312806EC3000B32953 /* MainViewController.swift in Sources */,
 				CE99D5B5280572C900631200 /* ViewController.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,

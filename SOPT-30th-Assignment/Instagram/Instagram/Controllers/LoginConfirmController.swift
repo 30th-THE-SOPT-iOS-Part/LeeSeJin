@@ -23,7 +23,7 @@ class LoginConfirmController: UIViewController {
     //MARK: - Helpers
     func setName() {
         if let name = name {
-            welcomeLabel.text = "\(name)님 \n Instagram에 오신 것을 환영합니다"
+            welcomeLabel.text = "\(name)님, Instagram에\n 오신 것을 환영합니다"
             welcomeLabel.sizeToFit()
         }
         confirmButton.layer.cornerRadius = 5

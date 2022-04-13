@@ -21,7 +21,7 @@
                                 <rect key="frame" x="100" y="178" width="175" height="50"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S9J-5P-h6J">
-                                <rect key="frame" x="16" y="268" width="343" height="140"/>
+                                <rect key="frame" x="16" y="268" width="343" height="134"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호, 사용자 이름 또는 이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-SX-3VD">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -39,10 +39,10 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7C-7q-GVw">
-                                        <rect key="frame" x="177.66666666666663" y="108" width="165.33333333333337" height="32"/>
+                                        <rect key="frame" x="224" y="108" width="119" height="26"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="비밀번호를 잊으셨나요?">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
@@ -53,34 +53,35 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRm-5x-kEW">
-                                <rect key="frame" x="20" y="440" width="335" height="44"/>
+                                <rect key="frame" x="20" y="434" width="335" height="44"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="War-ur-JIN"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="로그인">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="ARb-Ru-n5t" kind="presentation" modalPresentationStyle="fullScreen" id="2fJ-yO-t7j"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AQT-Wg-rvl">
-                                <rect key="frame" x="92.000000000000014" y="520" width="191.33333333333337" height="32"/>
+                                <rect key="frame" x="97.333333333333329" y="514" width="180.66666666666669" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없으신가요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLy-rt-zgb">
-                                        <rect key="frame" x="0.0" y="0.0" width="115.33333333333333" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz1-8j-KqG">
-                                        <rect key="frame" x="115.33333333333334" y="0.0" width="76" height="32"/>
+                                        <rect key="frame" x="108" y="0.0" width="72.666666666666686" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="가입하기">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signupButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9L-gv-ZLt"/>
@@ -145,22 +146,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-Ac-kho">
-                                <rect key="frame" x="34" y="327.33333333333331" width="307" height="157.66666666666669"/>
+                                <rect key="frame" x="34" y="332.33333333333331" width="307" height="147.66666666666669"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX님 Instagram에 오신 것을 환영합니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-SQ-RlA">
-                                        <rect key="frame" x="48.666666666666686" y="0.0" width="210" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX님 Instagram에 오신 것을 환영합니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-SQ-RlA">
+                                        <rect key="frame" x="29.333333333333329" y="0.0" width="248.66666666666669" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 이름을 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f1-3k-EQ5">
-                                        <rect key="frame" x="27" y="64" width="253" height="33.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="15.333333333333343" y="73.333333333333371" width="276.33333333333326" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-Rg-Ahx">
-                                        <rect key="frame" x="0.0" y="113.66666666666669" width="307" height="44"/>
+                                        <rect key="frame" x="0.0" y="103.66666666666669" width="307" height="44"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="wg0-Va-ttX"/>
@@ -181,10 +182,10 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcJ-HK-gOv">
-                                <rect key="frame" x="95.333333333333329" y="502.99999999999994" width="184.66666666666669" height="33.333333333333314"/>
+                                <rect key="frame" x="105" y="498" width="165" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>

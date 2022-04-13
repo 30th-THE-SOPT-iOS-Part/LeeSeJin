@@ -23,7 +23,6 @@ class NameRegistrationController: UIViewController {
         nextButton.setEnableStatus(enabled: false)
         nextButton.layer.cornerRadius = 5
 
-        
         nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     
@@ -39,4 +38,5 @@ class NameRegistrationController: UIViewController {
     @objc func handleTextChange() {
         nextButton.setEnableStatus(enabled: nameRegisterTextField.hasText)
     }
+    
 }
