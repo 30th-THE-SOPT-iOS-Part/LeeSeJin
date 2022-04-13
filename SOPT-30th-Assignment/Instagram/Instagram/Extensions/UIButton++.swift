@@ -12,6 +12,6 @@ extension UIButton {
     func setEnableStatus(enabled: Bool) {
         isEnabled = enabled
         if isEnabled { backgroundColor = .link }
-        else { backgroundColor = Const.Color.button_blocked }
+        else { backgroundColor = Const.Color.buttonBlocked }
     }
 }

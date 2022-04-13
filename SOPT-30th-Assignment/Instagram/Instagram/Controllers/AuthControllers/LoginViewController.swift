@@ -21,9 +21,9 @@ class LoginViewController: UIViewController {
     
     //MARK: - Helpers
     func setUI() {
-        nameTextField.setIcon(Const.Image.clear_circle, for: .clear)
+        nameTextField.setIcon(Const.Image.clearCircle, for: .clear)
         nameTextField.rightViewMode = .whileEditing
-        passwordTextField.setIcon(Const.Image.password_shown, for: .password_toggle)
+        passwordTextField.setIcon(Const.Image.passwordShown, for: .password_toggle)
         
         nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)

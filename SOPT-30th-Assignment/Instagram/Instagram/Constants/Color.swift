@@ -11,7 +11,7 @@ extension Const {
     
     struct Color {
         // Auth 버튼 색상
-        static let button_blocked = UIColor(named: "button_blocked")
+        static let buttonBlocked = UIColor(named: "button_blocked")
     }
     
 }

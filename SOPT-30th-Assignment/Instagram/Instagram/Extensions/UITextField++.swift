@@ -40,7 +40,7 @@ extension UITextField {
     }
     
     @objc func handlePasswordIconTapped(_ sender: UIButton) {
-        isSecureTextEntry ? sender.setImage(Const.Image.password_hidden, for: .normal) : sender.setImage(Const.Image.password_shown, for: .normal)
+        isSecureTextEntry ? sender.setImage(Const.Image.passwordHidden, for: .normal) : sender.setImage(Const.Image.passwordShown, for: .normal)
 
         isSecureTextEntry = !isSecureTextEntry
 
