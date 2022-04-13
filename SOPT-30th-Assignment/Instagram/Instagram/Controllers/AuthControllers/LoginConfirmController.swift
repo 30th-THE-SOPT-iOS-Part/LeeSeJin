@@ -32,6 +32,13 @@ class LoginConfirmController: UIViewController {
     
     //MARK: - Actions
     @IBAction func confirmButtonDidTap(_ sender: UIButton) {
+        guard let tabBarController = UIStoryboard(name: Const.Storyboard.HomeTab, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.TabBarController) as? TabBarController else { return }
+        
+        tabBarController.modalPresentationStyle = .fullScreen
+        present(tabBarController, animated: true, completion: nil)
+    }
+    
+    @IBAction func loginAnotherAccountButtonDidTap(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 }

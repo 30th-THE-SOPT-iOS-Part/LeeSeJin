@@ -15,6 +15,14 @@ extension Const {
         static let NameRegistrationController = "NameRegistrationController"
         static let PasswordRegistrationController = "PasswordRegistrationController"
         static let LoginConfirmController = "LoginConfirmController"
+        
+        //TabBar
+        static let TabBarController = "TabBarController"
+        static let HomeTabController = "HomeTabController"
+        static let SearchTabController = "SearchTabController"
+        static let ReelsTabController = "ReelsTabController"
+        static let ShopTabController = "ShopTabController"
+        static let ProfileTabController = "ProfileTabController"
     }
     
 }

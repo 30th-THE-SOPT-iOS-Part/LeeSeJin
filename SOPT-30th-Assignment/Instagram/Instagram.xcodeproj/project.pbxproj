@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BFAA9280731F100D97035 /* TabBarController.swift */; };
 		CE829F312806EC3000B32953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE829F302806EC3000B32953 /* MainViewController.swift */; };
 		CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */; };
 		CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */; };
@@ -19,6 +20,16 @@
 		CE99D5B82805755300631200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99D5B72805755300631200 /* Main.storyboard */; };
 		CE99D5BB28059F1900631200 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5BA28059F1900631200 /* Color.swift */; };
 		CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */; };
+		CEC690DE280724A80085BC7D /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC690DD280724A80085BC7D /* HomeTab.storyboard */; };
+		CEC690E0280724E20085BC7D /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC690DF280724E20085BC7D /* SearchTab.storyboard */; };
+		CEC690E2280726B20085BC7D /* ReelsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC690E1280726B20085BC7D /* ReelsTab.storyboard */; };
+		CEC690E4280726D30085BC7D /* ShopTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC690E3280726D30085BC7D /* ShopTab.storyboard */; };
+		CEC690E6280726E40085BC7D /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC690E5280726E40085BC7D /* ProfileTab.storyboard */; };
+		CEC690EA28072B2E0085BC7D /* HomeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC690E928072B2E0085BC7D /* HomeTabController.swift */; };
+		CEC690EC28072B3A0085BC7D /* SearchTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC690EB28072B3A0085BC7D /* SearchTabController.swift */; };
+		CEC690EE28072B4B0085BC7D /* ReelsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC690ED28072B4B0085BC7D /* ReelsTabController.swift */; };
+		CEC690F028072B640085BC7D /* ShopTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC690EF28072B640085BC7D /* ShopTabController.swift */; };
+		CEC690F228072B750085BC7D /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC690F128072B750085BC7D /* ProfileTabController.swift */; };
 		CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */; };
 		CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8A27FC9A8E00754F0E /* SceneDelegate.swift */; };
 		CECC5E8D27FC9A8E00754F0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC5E8C27FC9A8E00754F0E /* LoginViewController.swift */; };
@@ -29,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE6BFAA9280731F100D97035 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE829F302806EC3000B32953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistrationController.swift; sourceTree = "<group>"; };
 		CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationController.swift; sourceTree = "<group>"; };
@@ -41,6 +53,16 @@
 		CE99D5B72805755300631200 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE99D5BA28059F1900631200 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfirmController.swift; sourceTree = "<group>"; };
+		CEC690DD280724A80085BC7D /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		CEC690DF280724E20085BC7D /* SearchTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
+		CEC690E1280726B20085BC7D /* ReelsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsTab.storyboard; sourceTree = "<group>"; };
+		CEC690E3280726D30085BC7D /* ShopTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopTab.storyboard; sourceTree = "<group>"; };
+		CEC690E5280726E40085BC7D /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
+		CEC690E928072B2E0085BC7D /* HomeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabController.swift; sourceTree = "<group>"; };
+		CEC690EB28072B3A0085BC7D /* SearchTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabController.swift; sourceTree = "<group>"; };
+		CEC690ED28072B4B0085BC7D /* ReelsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsTabController.swift; sourceTree = "<group>"; };
+		CEC690EF28072B640085BC7D /* ShopTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTabController.swift; sourceTree = "<group>"; };
+		CEC690F128072B750085BC7D /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		CECC5E8527FC9A8E00754F0E /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECC5E8A27FC9A8E00754F0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,10 +107,8 @@
 		CE99D5A7280569CA00631200 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CECC5E8C27FC9A8E00754F0E /* LoginViewController.swift */,
-				CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */,
-				CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */,
-				CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */,
+				CEC690E828072B060085BC7D /* TabBarControllers */,
+				CEC690E728072AE20085BC7D /* AuthControllers */,
 				CE829F302806EC3000B32953 /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -134,8 +154,37 @@
 		CEC690DC28071B3A0085BC7D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CEC690DD280724A80085BC7D /* HomeTab.storyboard */,
+				CEC690DF280724E20085BC7D /* SearchTab.storyboard */,
+				CEC690E1280726B20085BC7D /* ReelsTab.storyboard */,
+				CEC690E3280726D30085BC7D /* ShopTab.storyboard */,
+				CEC690E5280726E40085BC7D /* ProfileTab.storyboard */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CEC690E728072AE20085BC7D /* AuthControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CECC5E8C27FC9A8E00754F0E /* LoginViewController.swift */,
+				CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */,
+				CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */,
+				CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */,
+			);
+			path = AuthControllers;
+			sourceTree = "<group>";
+		};
+		CEC690E828072B060085BC7D /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEC690E928072B2E0085BC7D /* HomeTabController.swift */,
+				CEC690EB28072B3A0085BC7D /* SearchTabController.swift */,
+				CEC690ED28072B4B0085BC7D /* ReelsTabController.swift */,
+				CEC690EF28072B640085BC7D /* ShopTabController.swift */,
+				CEC690F128072B750085BC7D /* ProfileTabController.swift */,
+				CE6BFAA9280731F100D97035 /* TabBarController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 		CECC5E7C27FC9A8E00754F0E = {
@@ -228,11 +277,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC690E6280726E40085BC7D /* ProfileTab.storyboard in Resources */,
 				CECC5E9527FC9A8E00754F0E /* LaunchScreen.storyboard in Resources */,
 				CE99D5B82805755300631200 /* Main.storyboard in Resources */,
+				CEC690E4280726D30085BC7D /* ShopTab.storyboard in Resources */,
 				CE99D5B32805709000631200 /* Registration.storyboard in Resources */,
+				CEC690E0280724E20085BC7D /* SearchTab.storyboard in Resources */,
+				CEC690E2280726B20085BC7D /* ReelsTab.storyboard in Resources */,
 				CECC5E9227FC9A8E00754F0E /* Assets.xcassets in Resources */,
 				CECC5E9027FC9A8E00754F0E /* Login.storyboard in Resources */,
+				CEC690DE280724A80085BC7D /* HomeTab.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +301,16 @@
 				CE99D5B028056DBA00631200 /* Storyboard.swift in Sources */,
 				CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */,
 				CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */,
+				CEC690F228072B750085BC7D /* ProfileTabController.swift in Sources */,
+				CEC690EA28072B2E0085BC7D /* HomeTabController.swift in Sources */,
+				CEC690EC28072B3A0085BC7D /* SearchTabController.swift in Sources */,
 				CE99D5BB28059F1900631200 /* Color.swift in Sources */,
+				CEC690EE28072B4B0085BC7D /* ReelsTabController.swift in Sources */,
 				CE99D5A928056A6900631200 /* UITextField++.swift in Sources */,
+				CEC690F028072B640085BC7D /* ShopTabController.swift in Sources */,
 				CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */,
 				CE829F312806EC3000B32953 /* MainViewController.swift in Sources */,
+				CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */,
 				CE99D5B5280572C900631200 /* ViewController.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
