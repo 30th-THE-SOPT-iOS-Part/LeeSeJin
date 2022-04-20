@@ -12,10 +12,10 @@ class TabBarController: UITabBarController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
         configureTabBar()
     }
+    
     
     //MARK: - Helpers
     func setUI() {

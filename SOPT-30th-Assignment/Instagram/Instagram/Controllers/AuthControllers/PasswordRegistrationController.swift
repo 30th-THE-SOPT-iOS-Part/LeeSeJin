@@ -34,6 +34,7 @@ class PasswordRegistrationController: UIViewController {
         
         LoginConfirmController.name = name
         LoginConfirmController.modalPresentationStyle = .fullScreen
+
         present(LoginConfirmController, animated: true) {
             self.navigationController?.popToRootViewController(animated: true)
         }
