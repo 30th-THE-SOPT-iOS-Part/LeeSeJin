@@ -24,7 +24,7 @@ class PasswordRegistrationController: UIViewController {
         nextButton.setEnableStatus(enabled: false)
         nextButton.layer.cornerRadius = 5
         
-        passwordTextField.setIcon(Const.Image.passwordShown, for: .password_toggle)
+        passwordTextField.setIcon(Const.Image.passwordShown, seletedImage: Const.Image.passwordHidden, for: .password_toggle)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     

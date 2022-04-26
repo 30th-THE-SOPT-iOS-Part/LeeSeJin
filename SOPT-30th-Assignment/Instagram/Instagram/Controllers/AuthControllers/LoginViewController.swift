@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
     func setUI() {
         nameTextField.setIcon(Const.Image.clearCircle, for: .clear)
         nameTextField.rightViewMode = .whileEditing
-        passwordTextField.setIcon(Const.Image.passwordShown, for: .password_toggle)
+        
+        passwordTextField.setIcon(Const.Image.passwordShown, seletedImage: Const.Image.passwordHidden, for: .password_toggle)
         
         nameTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
@@ -58,7 +59,6 @@ class LoginViewController: UIViewController {
         guard let registrationController = UIStoryboard(name: Const.Storyboard.Registration, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.NameRegistrationController) as? NameRegistrationController else { return }
         
         self.navigationController?.pushViewController(registrationController, animated: true)
-    
     }
     
 }
