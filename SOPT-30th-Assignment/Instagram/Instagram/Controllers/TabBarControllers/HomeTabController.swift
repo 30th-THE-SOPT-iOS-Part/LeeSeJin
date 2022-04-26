@@ -10,11 +10,12 @@ import UIKit
 class HomeTabController: UIViewController {
     
     //MARK: - Lifecycle
-    override func viewDidLoad() {
+    override func viewDidLoad() {        
         super.viewDidLoad()
     }
     
+
     //MARK: - Helpers
-    
+
     //MARK: - Actions
 }

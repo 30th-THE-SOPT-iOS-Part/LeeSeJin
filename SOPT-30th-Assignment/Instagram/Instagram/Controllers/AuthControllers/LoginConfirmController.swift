@@ -32,7 +32,7 @@ class LoginConfirmController: UIViewController {
     
     //MARK: - Actions
     @IBAction func confirmButtonDidTap(_ sender: UIButton) {
-        guard let tabBarController = UIStoryboard(name: Const.Storyboard.HomeTab, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.TabBarController) as? TabBarController else { return }
+        let tabBarController = TabBarController()
         
         //루트 뷰컨트롤러 변경
         guard let uWindow = self.view.window else { return }
