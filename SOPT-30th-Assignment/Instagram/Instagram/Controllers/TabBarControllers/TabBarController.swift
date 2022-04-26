@@ -13,16 +13,16 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        configureTabBar()
+        setDelegate()
     }
     
-    
+
     //MARK: - Helpers
     func setUI() {
         tabBar.unselectedItemTintColor = .black
     }
     
-    func configureTabBar() {
+    func setDelegate() {
         self.delegate = self
     }
     

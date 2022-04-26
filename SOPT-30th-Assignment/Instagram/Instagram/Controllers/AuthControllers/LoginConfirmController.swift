@@ -35,11 +35,11 @@ class LoginConfirmController: UIViewController {
         guard let tabBarController = UIStoryboard(name: Const.Storyboard.HomeTab, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.TabBarController) as? TabBarController else { return }
         
         //루트 뷰컨트롤러 변경
-        self.view.window?.rootViewController = tabBarController
-        self.view.window?.makeKeyAndVisible()
-
-        //tabBarController.modalPresentationStyle = .fullScreen
-        //present(tabBarController, animated: true, completion: nil)
+        guard let uWindow = self.view.window else { return }
+        uWindow.rootViewController = tabBarController
+        uWindow.makeKey()
+        UIView.transition(with: uWindow, duration: 0.3, options: [.transitionCrossDissolve], animations: {}, completion: nil)
+        
     }
     
     @IBAction func loginAnotherAccountButtonDidTap(_ sender: UIButton) {
