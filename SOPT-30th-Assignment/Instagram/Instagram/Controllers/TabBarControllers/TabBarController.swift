@@ -37,11 +37,11 @@ class TabBarController: UITabBarController {
         let shopSB = UIStoryboard(name: Const.Storyboard.ShopTab, bundle: nil)
         let profileSB = UIStoryboard(name: Const.Storyboard.ProfileTab, bundle: nil)
 
-        guard let homeVC = homeSB.instantiateViewController(withIdentifier: Const.ViewController.HomeTabController) as? HomeTabController,
-              let searchVC = searchSB.instantiateViewController(withIdentifier: Const.ViewController.SearchTabController) as? SearchTabController,
-              let reelsVC = reelsSB.instantiateViewController(withIdentifier: Const.ViewController.ReelsTabController) as? ReelsTabController,
-              let shopVC = shopSB.instantiateViewController(withIdentifier: Const.ViewController.ShopTabController) as? ShopTabController,
-              let proifleVC = profileSB.instantiateViewController(withIdentifier: Const.ViewController.ProfileTabController) as? ProfileTabController
+        guard let homeVC = homeSB.instantiateViewController(withIdentifier: HomeTabController.reuseIdentifier) as? HomeTabController,
+              let searchVC = searchSB.instantiateViewController(withIdentifier: SearchTabController.reuseIdentifier) as? SearchTabController,
+              let reelsVC = reelsSB.instantiateViewController(withIdentifier: ReelsTabController.reuseIdentifier) as? ReelsTabController,
+              let shopVC = shopSB.instantiateViewController(withIdentifier: ShopTabController.reuseIdentifier) as? ShopTabController,
+              let proifleVC = profileSB.instantiateViewController(withIdentifier: ProfileTabController.reuseIdentifier) as? ProfileTabController
         else { return }
         
         let homeNVC = templateNavigationController(unselectedImage: Const.Image.home,
@@ -95,11 +95,12 @@ class TabBarController: UITabBarController {
 extension TabBarController: UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
         let index = viewControllers?.firstIndex(of: viewController)
         
         (index == 2) ? changeTabBarColor(toBlack: true) : changeTabBarColor(toBlack: false)
         
         return true
     }
+    
+
 }

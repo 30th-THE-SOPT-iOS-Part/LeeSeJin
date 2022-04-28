@@ -17,17 +17,14 @@ class LoginConfirmController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setName()
+        setWelcomLabelText()
     }
     
     //MARK: - Helpers
-    func setName() {
+    func setWelcomLabelText() {
         if let name = name {
-            welcomeLabel.text = "\(name)님, Instagram에\n 오신 것을 환영합니다"
-            welcomeLabel.sizeToFit()
+            welcomeLabel.text = "\(name)님, Instagram에 오신 것을 환영합니다"
         }
-        confirmButton.layer.cornerRadius = 5
-
     }
     
     //MARK: - Actions

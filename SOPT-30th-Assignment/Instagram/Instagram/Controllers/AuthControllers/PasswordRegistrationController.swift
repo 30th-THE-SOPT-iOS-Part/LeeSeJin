@@ -30,7 +30,7 @@ class PasswordRegistrationController: UIViewController {
     
     //MARK: - Actions
     @IBAction func nextButtonDidTap(_ sender: Any) {
-        guard let LoginConfirmController = UIStoryboard(name: Const.Storyboard.Login, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.LoginConfirmController) as? LoginConfirmController else { return }
+        guard let LoginConfirmController = UIStoryboard(name: Const.Storyboard.Login, bundle: nil).instantiateViewController(withIdentifier: LoginConfirmController.reuseIdentifier) as? LoginConfirmController else { return }
         
         LoginConfirmController.name = name
         LoginConfirmController.modalPresentationStyle = .fullScreen

@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func signupButtonDidTap(_ sender: UIButton) {
-        guard let registrationController = UIStoryboard(name: Const.Storyboard.Registration, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.NameRegistrationController) as? NameRegistrationController else { return }
+        guard let registrationController = UIStoryboard(name: Const.Storyboard.Registration, bundle: nil).instantiateViewController(withIdentifier: NameRegistrationController.reuseIdentifier) as? NameRegistrationController else { return }
         
         self.navigationController?.pushViewController(registrationController, animated: true)
     }

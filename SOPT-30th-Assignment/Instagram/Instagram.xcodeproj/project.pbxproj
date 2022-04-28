@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3CE853281AE74B0039AC64 /* NSObject++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE852281AE74B0039AC64 /* NSObject++.swift */; };
 		CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BFAA9280731F100D97035 /* TabBarController.swift */; };
 		CE829F312806EC3000B32953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE829F302806EC3000B32953 /* MainViewController.swift */; };
 		CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */; };
@@ -16,7 +17,6 @@
 		CE99D5AE28056D1700631200 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5AD28056D1700631200 /* Image.swift */; };
 		CE99D5B028056DBA00631200 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5AF28056DBA00631200 /* Storyboard.swift */; };
 		CE99D5B32805709000631200 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99D5B22805709000631200 /* Registration.storyboard */; };
-		CE99D5B5280572C900631200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5B4280572C900631200 /* ViewController.swift */; };
 		CE99D5B82805755300631200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE99D5B72805755300631200 /* Main.storyboard */; };
 		CE99D5BB28059F1900631200 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99D5BA28059F1900631200 /* Color.swift */; };
 		CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */; };
@@ -40,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3CE852281AE74B0039AC64 /* NSObject++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject++.swift"; sourceTree = "<group>"; };
 		CE6BFAA9280731F100D97035 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE829F302806EC3000B32953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistrationController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		CE99D5AD28056D1700631200 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		CE99D5AF28056DBA00631200 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		CE99D5B22805709000631200 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
-		CE99D5B4280572C900631200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE99D5B72805755300631200 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE99D5BA28059F1900631200 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfirmController.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 			children = (
 				CEFE640127FCA42F00395565 /* UIButton++.swift */,
 				CE99D5A828056A6900631200 /* UITextField++.swift */,
+				CE3CE852281AE74B0039AC64 /* NSObject++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -120,7 +121,6 @@
 				CE99D5AA28056AC800631200 /* Const.swift */,
 				CE99D5AD28056D1700631200 /* Image.swift */,
 				CE99D5AF28056DBA00631200 /* Storyboard.swift */,
-				CE99D5B4280572C900631200 /* ViewController.swift */,
 				CE99D5BA28059F1900631200 /* Color.swift */,
 			);
 			path = Constants;
@@ -311,11 +311,11 @@
 				CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */,
 				CE829F312806EC3000B32953 /* MainViewController.swift in Sources */,
 				CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */,
-				CE99D5B5280572C900631200 /* ViewController.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
 				CEFE640227FCA42F00395565 /* UIButton++.swift in Sources */,
 				CE99D5AB28056AC800631200 /* Const.swift in Sources */,
+				CE3CE853281AE74B0039AC64 /* NSObject++.swift in Sources */,
 				CE99D5AE28056D1700631200 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

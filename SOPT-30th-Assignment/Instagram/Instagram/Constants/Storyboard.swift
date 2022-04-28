@@ -9,7 +9,7 @@ import Foundation
 
 extension Const {
     
-    struct Storyboard {
+    enum Storyboard {
         //Auth
         static let Registration = "Registration"
         static let Login = "Login"
