@@ -9,7 +9,7 @@ import UIKit
 
 extension Const {
         
-    struct Image {
+    enum Image {
         // 텍스트 필드 아이콘
         static let clearCircle = UIImage(systemName: "xmark.circle")
         static let passwordShown = UIImage(named: "password_shown_eye_icon")
@@ -27,5 +27,4 @@ extension Const {
         static let shop = UIImage(named: "icn_shop")
         static let shopSelected = UIImage(named: "icn_shop_selected")
     }
-    
 }

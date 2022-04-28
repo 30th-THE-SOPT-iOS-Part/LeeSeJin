@@ -9,7 +9,7 @@ import UIKit
 
 extension Const {
     
-    struct Color {
+    enum Color {
         // Auth 버튼 색상
         static let buttonBlocked = UIColor(named: "button_blocked")
     }
