@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bVe-Yg-M09">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram_Black_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="f3u-yx-ZCY">
+                                <rect key="frame" x="126.66666666666669" y="252.66666666666663" width="175" height="50"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S9J-5P-h6J">
+                                <rect key="frame" x="16" y="342.66666666666669" width="396" height="134"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호, 사용자 이름 또는 이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-SX-3VD">
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="8Mn-ea-47v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4P-6Z-u4S">
+                                        <rect key="frame" x="0.0" y="54" width="396" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7C-7q-GVw">
+                                        <rect key="frame" x="277" y="108" width="119" height="26"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="비밀번호를 잊으셨나요?">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DpR-SX-3VD" firstAttribute="leading" secondItem="S9J-5P-h6J" secondAttribute="leading" id="13a-EZ-IOu"/>
+                                    <constraint firstItem="K4P-6Z-u4S" firstAttribute="height" secondItem="DpR-SX-3VD" secondAttribute="height" id="5y1-55-nnS"/>
+                                    <constraint firstItem="K4P-6Z-u4S" firstAttribute="leading" secondItem="S9J-5P-h6J" secondAttribute="leading" id="odi-Ea-kf2"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRm-5x-kEW">
+                                <rect key="frame" x="20" y="508.66666666666674" width="388" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="War-ur-JIN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ARb-Ru-n5t" kind="presentation" modalPresentationStyle="fullScreen" id="2fJ-yO-t7j"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AQT-Wg-rvl">
+                                <rect key="frame" x="123.66666666666667" y="588.66666666666663" width="180.66666666666663" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없으신가요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLy-rt-zgb">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz1-8j-KqG">
+                                        <rect key="frame" x="107.99999999999997" y="0.0" width="72.666666666666657" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="가입하기">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signupButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9L-gv-ZLt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S9J-5P-h6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5dU-Ko-9hv"/>
+                            <constraint firstItem="SRm-5x-kEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AGJ-nf-rG3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9J-5P-h6J" secondAttribute="trailing" constant="16" id="C8x-vJ-sgo"/>
+                            <constraint firstItem="f3u-yx-ZCY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IcQ-Pv-2xy"/>
+                            <constraint firstItem="S9J-5P-h6J" firstAttribute="top" secondItem="f3u-yx-ZCY" secondAttribute="bottom" constant="40" id="Jmc-nD-KWO"/>
+                            <constraint firstItem="f3u-yx-ZCY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.6" id="YDd-rc-oJ6"/>
+                            <constraint firstItem="AQT-Wg-rvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a8q-Fd-m2s"/>
+                            <constraint firstItem="AQT-Wg-rvl" firstAttribute="top" secondItem="SRm-5x-kEW" secondAttribute="bottom" constant="36" id="gV5-wM-eFq"/>
+                            <constraint firstItem="SRm-5x-kEW" firstAttribute="top" secondItem="S9J-5P-h6J" secondAttribute="bottom" constant="32" id="rrv-RD-a57"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SRm-5x-kEW" secondAttribute="trailing" constant="20" id="sKK-JO-G3J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Woi-CH-Vdp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="3QK-CW-hCF"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="forgotPasswordButton" destination="p7C-7q-GVw" id="LnS-Kh-UX8"/>
+                        <outlet property="loginButton" destination="SRm-5x-kEW" id="qS3-x0-uYZ"/>
+                        <outlet property="nameTextField" destination="DpR-SX-3VD" id="aiq-JV-5Ew"/>
+                        <outlet property="passwordTextField" destination="K4P-6Z-u4S" id="Qy4-mI-UBc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="122.54464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MWi-Cr-9Jf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bVe-Yg-M09" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="icn_black_24" backIndicatorTransitionMaskImage="icn_black_24" id="R03-n7-Wgt">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vav-VM-KTd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZiD-Bj-uQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="123"/>
+        </scene>
+        <!--Login Confirm Controller-->
+        <scene sceneID="RqD-v0-qDB">
+            <objects>
+                <viewController storyboardIdentifier="LoginConfirmController" id="ARb-Ru-n5t" customClass="LoginConfirmController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nl-1u-Qgz">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-Ac-kho">
+                                <rect key="frame" x="34" y="389.33333333333331" width="360" height="147.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX님 Instagram에 오신 것을 환영합니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-SQ-RlA">
+                                        <rect key="frame" x="55.666666666666671" y="0.0" width="248.66666666666663" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 이름을 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f1-3k-EQ5">
+                                        <rect key="frame" x="42" y="73.333333333333371" width="276.33333333333331" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-Rg-Ahx">
+                                        <rect key="frame" x="0.0" y="103.66666666666669" width="360" height="44"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="wg0-Va-ttX"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="완료하기">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmButtonDidTap:" destination="ARb-Ru-n5t" eventType="touchUpInside" id="sHa-xz-0Ec"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="E0s-Rg-Ahx" firstAttribute="leading" secondItem="9uO-Ac-kho" secondAttribute="leading" id="5GW-FL-OoD"/>
+                                    <constraint firstAttribute="trailing" secondItem="E0s-Rg-Ahx" secondAttribute="trailing" id="vCt-YH-r18"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcJ-HK-gOv">
+                                <rect key="frame" x="131.66666666666666" y="555" width="164.99999999999997" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginAnotherAccountButtonDidTap:" destination="ARb-Ru-n5t" eventType="touchUpInside" id="c2k-cW-UN1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pa4-Bx-W3d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="centerX" secondItem="6nl-1u-Qgz" secondAttribute="centerX" id="47G-Na-FiX"/>
+                            <constraint firstItem="UcJ-HK-gOv" firstAttribute="centerX" secondItem="6nl-1u-Qgz" secondAttribute="centerX" id="7wd-xj-CgR"/>
+                            <constraint firstItem="UcJ-HK-gOv" firstAttribute="top" secondItem="9uO-Ac-kho" secondAttribute="bottom" constant="18" id="Sc4-ck-Ml0"/>
+                            <constraint firstItem="pa4-Bx-W3d" firstAttribute="trailing" secondItem="9uO-Ac-kho" secondAttribute="trailing" constant="34" id="az7-0e-ndZ"/>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="leading" secondItem="pa4-Bx-W3d" secondAttribute="leading" constant="34" id="eiu-CT-Wqv"/>
+                            <constraint firstItem="9uO-Ac-kho" firstAttribute="centerY" secondItem="6nl-1u-Qgz" secondAttribute="centerY" id="tZa-Mo-F1S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="E0s-Rg-Ahx" id="X3T-AK-o1W"/>
+                        <outlet property="welcomeLabel" destination="uJf-SQ-RlA" id="06p-4g-rA0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooj-iV-vCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="1027"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Instagram_Black_Logo" width="175" height="50"/>
+        <image name="icn_black_24" width="24.333333969116211" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

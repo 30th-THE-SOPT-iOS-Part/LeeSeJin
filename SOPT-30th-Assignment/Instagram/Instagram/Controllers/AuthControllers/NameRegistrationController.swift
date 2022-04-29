@@ -12,13 +12,17 @@ class NameRegistrationController: UIViewController {
     @IBOutlet weak var nameRegisterTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
     }
 
+    //MARK: - Helpers
     func setUI() {
         nextButton.setEnableStatus(enabled: false)
+        nextButton.layer.cornerRadius = 5
+
         nameRegisterTextField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
     }
     
@@ -30,8 +34,9 @@ class NameRegistrationController: UIViewController {
     }
     
 
-    
+    //MARK: - Actions
     @objc func handleTextChange() {
         nextButton.setEnableStatus(enabled: nameRegisterTextField.hasText)
     }
+    
 }
