@@ -34,18 +34,19 @@ class StoryTableViewCell: UITableViewCell {
 
 //MARK: - UICollectionViewDelegate
 extension StoryTableViewCell: UICollectionViewDelegate {
-    
+
 }
 
 //MARK: - UICollectionViewDataSource
 extension StoryTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return StoryDataModel.sampleData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else { return UICollectionViewCell() }
         
+        cell.setData(storyData: StoryDataModel.sampleData[indexPath.row])
         return cell
     }
     
@@ -60,7 +61,7 @@ extension StoryTableViewCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 6)
+        return UIEdgeInsets(top: 0, left: 6, bottom: 8, right: 6)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

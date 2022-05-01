@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0yX-LA-5ar">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zDo-xy-dMW">
                             <size key="itemSize" width="128" height="128"/>
@@ -27,11 +27,21 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0a-fr-ojg">
+                        <rect key="frame" x="0.0" y="82" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="psY-rF-KN6"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0yX-LA-5ar" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2WC-z7-E8v"/>
+                    <constraint firstAttribute="bottom" secondItem="X0a-fr-ojg" secondAttribute="bottom" id="Bck-Jh-ut6"/>
+                    <constraint firstAttribute="trailing" secondItem="X0a-fr-ojg" secondAttribute="trailing" id="LCO-Uv-VaQ"/>
                     <constraint firstAttribute="trailing" secondItem="0yX-LA-5ar" secondAttribute="trailing" id="NhO-bq-Niw"/>
-                    <constraint firstAttribute="bottom" secondItem="0yX-LA-5ar" secondAttribute="bottom" constant="11" id="kxV-W4-ppz"/>
+                    <constraint firstAttribute="bottom" secondItem="0yX-LA-5ar" secondAttribute="bottom" id="kxV-W4-ppz"/>
+                    <constraint firstItem="X0a-fr-ojg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mFd-Gh-wUg"/>
                     <constraint firstItem="0yX-LA-5ar" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yuh-h0-ZYt"/>
                 </constraints>
             </tableViewCellContentView>
@@ -39,7 +49,7 @@
             <connections>
                 <outlet property="collectionView" destination="0yX-LA-5ar" id="IUZ-ny-Y9L"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+            <point key="canvasLocation" x="131.15942028985509" y="125.55803571428571"/>
         </tableViewCell>
     </objects>
     <resources>

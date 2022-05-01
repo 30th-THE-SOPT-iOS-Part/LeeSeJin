@@ -43,7 +43,7 @@ extension HomeTabController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 83
+            return 80
         case 1:
             return 488
         default:

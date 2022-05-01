@@ -11,9 +11,17 @@ class StoryCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "StoryCollectionViewCell"
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .green
     }
 
+    func setData(storyData: StoryDataModel) {
+        profileImageView.image = UIImage(named: storyData.profileImageName)
+        profileNameLabel.text = storyData.profileName
+    }
+    
+    
 }
