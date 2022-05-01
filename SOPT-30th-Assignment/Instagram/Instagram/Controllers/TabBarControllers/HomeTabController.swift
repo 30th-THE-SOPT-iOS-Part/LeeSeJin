@@ -63,7 +63,7 @@ extension HomeTabController: UITableViewDataSource {
         if section == 0 {
             return 1
         }
-        return 3
+        return FeedDataModel.sampleData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,6 +75,8 @@ extension HomeTabController: UITableViewDataSource {
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
             
+            cell.setData(feedData: FeedDataModel.sampleData[indexPath.row])
+            cell.selectionStyle = .none
             return cell
         default:
             return UITableViewCell()
