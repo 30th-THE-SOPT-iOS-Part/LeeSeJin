@@ -41,6 +41,10 @@
 		CEFC62C2281E6F2C00E24E5A /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFC62C0281E6F2C00E24E5A /* FeedTableViewCell.xib */; };
 		CEFC62C7281E6FFF00E24E5A /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC62C5281E6FFF00E24E5A /* StoryTableViewCell.swift */; };
 		CEFC62C8281E6FFF00E24E5A /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFC62C6281E6FFF00E24E5A /* StoryTableViewCell.xib */; };
+		CEFC62CC281E7F6C00E24E5A /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC62CA281E7F6C00E24E5A /* StoryCollectionViewCell.swift */; };
+		CEFC62CD281E7F6C00E24E5A /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFC62CB281E7F6C00E24E5A /* StoryCollectionViewCell.xib */; };
+		CEFC62D0281E81E500E24E5A /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC62CF281E81E500E24E5A /* StoryDataModel.swift */; };
+		CEFC62D2281E81EB00E24E5A /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC62D1281E81EB00E24E5A /* FeedDataModel.swift */; };
 		CEFE640227FCA42F00395565 /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE640127FCA42F00395565 /* UIButton++.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,10 @@
 		CEFC62C0281E6F2C00E24E5A /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		CEFC62C5281E6FFF00E24E5A /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		CEFC62C6281E6FFF00E24E5A /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
+		CEFC62CA281E7F6C00E24E5A /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEFC62CB281E7F6C00E24E5A /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		CEFC62CF281E81E500E24E5A /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
+		CEFC62D1281E81EB00E24E5A /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
 		CEFE640127FCA42F00395565 /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +225,7 @@
 		CECC5E8727FC9A8E00754F0E /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				CEFC62CE281E81CD00E24E5A /* Models */,
 				CE99D5AC28056CE900631200 /* Constants */,
 				CE99D5A7280569CA00631200 /* Controllers */,
 				CE99D5A6280569C300631200 /* Extensions */,
@@ -292,10 +301,29 @@
 		CEFC62C4281E6F8D00E24E5A /* StoryTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				CEFC62C9281E7F5800E24E5A /* StoryCollectionViewCell */,
 				CEFC62C5281E6FFF00E24E5A /* StoryTableViewCell.swift */,
 				CEFC62C6281E6FFF00E24E5A /* StoryTableViewCell.xib */,
 			);
 			path = StoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		CEFC62C9281E7F5800E24E5A /* StoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEFC62CA281E7F6C00E24E5A /* StoryCollectionViewCell.swift */,
+				CEFC62CB281E7F6C00E24E5A /* StoryCollectionViewCell.xib */,
+			);
+			path = StoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CEFC62CE281E81CD00E24E5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEFC62CF281E81E500E24E5A /* StoryDataModel.swift */,
+				CEFC62D1281E81EB00E24E5A /* FeedDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +394,7 @@
 				CEFC62C8281E6FFF00E24E5A /* StoryTableViewCell.xib in Resources */,
 				CECC5E9227FC9A8E00754F0E /* Assets.xcassets in Resources */,
 				CEFC62C2281E6F2C00E24E5A /* FeedTableViewCell.xib in Resources */,
+				CEFC62CD281E7F6C00E24E5A /* StoryCollectionViewCell.xib in Resources */,
 				CECC5E9027FC9A8E00754F0E /* Login.storyboard in Resources */,
 				CEC690DE280724A80085BC7D /* HomeTab.storyboard in Resources */,
 			);
@@ -379,9 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECC5E8D27FC9A8E00754F0E /* LoginViewController.swift in Sources */,
+				CEFC62D2281E81EB00E24E5A /* FeedDataModel.swift in Sources */,
 				CE99D5B028056DBA00631200 /* Storyboard.swift in Sources */,
 				CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */,
 				CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */,
+				CEFC62D0281E81E500E24E5A /* StoryDataModel.swift in Sources */,
 				CEC690F228072B750085BC7D /* ProfileTabController.swift in Sources */,
 				CEC690EA28072B2E0085BC7D /* HomeTabController.swift in Sources */,
 				CEC690EC28072B3A0085BC7D /* SearchTabController.swift in Sources */,
@@ -394,6 +425,7 @@
 				CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */,
 				CEFC62B8281E652500E24E5A /* UIViewController++.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
+				CEFC62CC281E7F6C00E24E5A /* StoryCollectionViewCell.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
 				CEFE640227FCA42F00395565 /* UIButton++.swift in Sources */,
 				CE99D5AB28056AC800631200 /* Const.swift in Sources */,

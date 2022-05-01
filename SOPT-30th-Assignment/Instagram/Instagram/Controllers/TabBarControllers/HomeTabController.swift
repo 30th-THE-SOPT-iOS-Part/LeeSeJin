@@ -38,10 +38,22 @@ class HomeTabController: UIViewController {
     //MARK: - Actions
 }
 
+//MARK: - UITableViewDelegate
 extension HomeTabController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 83
+        case 1:
+            return 488
+        default:
+            return 0
+        }
+    }
     
 }
 
+//MARK: - UITableViewDataSource
 extension HomeTabController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -51,7 +63,7 @@ extension HomeTabController: UITableViewDataSource {
         if section == 0 {
             return 1
         }
-        return 10
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,6 +80,5 @@ extension HomeTabController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
     
 }
