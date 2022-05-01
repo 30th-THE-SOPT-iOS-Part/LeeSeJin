@@ -75,12 +75,21 @@ extension HomeTabController: UITableViewDataSource {
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
             
-            cell.setData(feedData: FeedDataModel.sampleData[indexPath.row])
+            cell.delegate = self
             cell.selectionStyle = .none
+            cell.setData(feedData: FeedDataModel.sampleData[indexPath.row])
+            
             return cell
         default:
             return UITableViewCell()
         }
     }
     
+}
+
+
+extension HomeTabController: FeedTableViewCellDelegate {
+    func cell(_ cell: FeedTableViewCell, wantsToLike: Bool) {
+        cell.likeButton.isSelected.toggle()
+    }
 }

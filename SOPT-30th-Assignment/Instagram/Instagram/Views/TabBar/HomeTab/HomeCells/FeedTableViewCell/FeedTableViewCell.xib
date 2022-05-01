@@ -52,7 +52,7 @@
                             <constraint firstItem="c5t-lL-Tk6" firstAttribute="leading" secondItem="XkD-1v-Ggn" secondAttribute="trailing" constant="6" id="yBY-7c-uQE"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-QR-zkc">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-QR-zkc">
                         <rect key="frame" x="0.0" y="46" width="375" height="340"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xks-Ip-5Ta">

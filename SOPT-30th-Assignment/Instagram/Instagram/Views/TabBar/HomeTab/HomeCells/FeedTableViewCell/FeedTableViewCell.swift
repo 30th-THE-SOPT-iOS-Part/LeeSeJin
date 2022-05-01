@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol FeedTableViewCellDelegate: AnyObject {
+    func cell(_ cell: FeedTableViewCell, wantsToLike: Bool)
+}
+
+
 class FeedTableViewCell: UITableViewCell {
     static let identifier = "FeedTableViewCell"
+    
+    weak var delegate: FeedTableViewCellDelegate?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -40,7 +47,7 @@ class FeedTableViewCell: UITableViewCell {
     
     //MARK: - Actions
     @IBAction func likeButtonDidTap(_ sender: UIButton) {
-        sender.isSelected.toggle()
+        delegate?.cell(self, wantsToLike: !sender.isSelected)
     }
     
 }
