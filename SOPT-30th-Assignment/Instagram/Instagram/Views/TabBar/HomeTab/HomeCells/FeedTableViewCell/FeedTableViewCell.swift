@@ -26,15 +26,15 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var commentCountButton: UIButton!
     
+    @IBOutlet weak var captionLabelWidth: NSLayoutConstraint!
     
     //MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     //MARK: - Helpers
-    
+
     func setData(feedData: FeedDataModel) {
         profileImageView.image = UIImage(named: feedData.profileImageName)
         profileNameLabel.text = feedData.profileName
@@ -43,6 +43,8 @@ class FeedTableViewCell: UITableViewCell {
         captionWriterNameLabel.text = feedData.profileName
         captionLabel.text = feedData.caption
         commentCountButton.setTitle("댓글 \(feedData.commentCount)개 모두 보기", for: .normal)
+        
+        captionLabelWidth.constant = UIScreen.main.bounds.width - (captionWriterNameLabel.intrinsicContentSize.width + 12 + 4 + 12)
     }
     
     //MARK: - Actions

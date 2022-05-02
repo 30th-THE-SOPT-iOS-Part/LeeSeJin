@@ -33,6 +33,8 @@ class HomeTabController: UIViewController {
         let FeedNib = UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
         tableView.register(FeedNib, forCellReuseIdentifier: FeedTableViewCell.identifier)
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 500
     }
     
     //MARK: - Actions
@@ -40,16 +42,16 @@ class HomeTabController: UIViewController {
 
 //MARK: - UITableViewDelegate
 extension HomeTabController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 80
-        case 1:
-            return 488
-        default:
-            return 0
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath.section {
+//        case 0:
+//            return 80
+//        case 1:
+//            return 500
+//        default:
+//            return 0
+//        }
+//    }
     
 }
 

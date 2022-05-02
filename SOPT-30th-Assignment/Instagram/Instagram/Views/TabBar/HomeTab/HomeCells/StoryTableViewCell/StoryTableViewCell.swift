@@ -60,10 +60,12 @@ extension StoryTableViewCell: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 58, height: 72)
     }
     
+    // 콜렉션뷰 전체의 패딩값
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 6, bottom: 8, right: 6)
     }
     
+    // Cell간의 좌우간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 4
     }
