@@ -25,6 +25,11 @@
                                     <constraint firstAttribute="width" constant="24" id="Jdb-hx-7ue"/>
                                     <constraint firstAttribute="height" constant="24" id="igQ-4m-6fW"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5t-lL-Tk6">
                                 <rect key="frame" x="36" y="16" width="33" height="14.5"/>

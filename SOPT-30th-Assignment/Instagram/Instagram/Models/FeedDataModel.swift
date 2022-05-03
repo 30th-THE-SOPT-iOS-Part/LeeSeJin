@@ -11,9 +11,9 @@ struct FeedDataModel {
     let profileImageName: String
     let profileName: String
     let feedImageName: String
-    let likeCount: Int
+    var likeCount: Int
     let caption: String
-    let commentCount: Int
+    var commentCount: Int
 }
 
 

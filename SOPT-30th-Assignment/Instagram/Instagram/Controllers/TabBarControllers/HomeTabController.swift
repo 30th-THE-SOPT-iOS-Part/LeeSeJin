@@ -78,9 +78,7 @@ extension HomeTabController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
             
             cell.delegate = self
-            cell.selectionStyle = .none
-            cell.setData(feedData: FeedDataModel.sampleData[indexPath.row])
-            
+            cell.model = FeedDataModel.sampleData[indexPath.row]
             return cell
         default:
             return UITableViewCell()
@@ -93,5 +91,10 @@ extension HomeTabController: UITableViewDataSource {
 extension HomeTabController: FeedTableViewCellDelegate {
     func cell(_ cell: FeedTableViewCell, wantsToLike: Bool) {
         cell.likeButton.isSelected.toggle()
+        if wantsToLike {
+            cell.model?.likeCount += 1
+        } else {
+            cell.model?.likeCount -= 1
+        }
     }
 }

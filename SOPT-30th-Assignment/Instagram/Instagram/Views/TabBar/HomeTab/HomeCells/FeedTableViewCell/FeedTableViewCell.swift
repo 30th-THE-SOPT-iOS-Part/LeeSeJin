@@ -17,6 +17,13 @@ class FeedTableViewCell: UITableViewCell {
     
     weak var delegate: FeedTableViewCellDelegate?
     
+    var model: FeedDataModel? {
+        didSet {
+            guard let model = model else { return }
+            setData(feedData: model)
+        }
+    }
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var feedImageView: UIImageView!
