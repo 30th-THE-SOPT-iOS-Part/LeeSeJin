@@ -103,14 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE99D5A5280569BE00631200 /* Views */ = {
+		CE99D5A5280569BE00631200 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				CEC690DC28071B3A0085BC7D /* TabBar */,
 				CE99D5B9280575A700631200 /* Auth */,
 				CE99D5B72805755300631200 /* Main.storyboard */,
+				CE829F302806EC3000B32953 /* MainViewController.swift */,
 			);
-			path = Views;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		CE99D5A6280569C300631200 /* Extensions */ = {
@@ -122,16 +123,6 @@
 				CEFC62B7281E652500E24E5A /* UIViewController++.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		CE99D5A7280569CA00631200 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CEC690E828072B060085BC7D /* TabBarControllers */,
-				CEC690E728072AE20085BC7D /* AuthControllers */,
-				CE829F302806EC3000B32953 /* MainViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CE99D5AC28056CE900631200 /* Constants */ = {
@@ -149,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				CE99D5B22805709000631200 /* Registration.storyboard */,
+				CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */,
+				CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -157,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				CECC5E8E27FC9A8E00754F0E /* Login.storyboard */,
+				CECC5E8C27FC9A8E00754F0E /* LoginViewController.swift */,
+				CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -173,6 +168,7 @@
 		CEC690DC28071B3A0085BC7D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CE6BFAA9280731F100D97035 /* TabBarController.swift */,
 				CEFC62B9281E6B4000E24E5A /* HomeTab */,
 				CEFC62BB281E6E4600E24E5A /* SearchTab */,
 				CEFC62BC281E6E4B00E24E5A /* ReelsTab */,
@@ -180,30 +176,6 @@
 				CEFC62BE281E6E5800E24E5A /* ProfileTab */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		CEC690E728072AE20085BC7D /* AuthControllers */ = {
-			isa = PBXGroup;
-			children = (
-				CECC5E8C27FC9A8E00754F0E /* LoginViewController.swift */,
-				CEBD5FBA27FDCB8200B7CF89 /* LoginConfirmController.swift */,
-				CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */,
-				CE96576F27FDD876006677CE /* PasswordRegistrationController.swift */,
-			);
-			path = AuthControllers;
-			sourceTree = "<group>";
-		};
-		CEC690E828072B060085BC7D /* TabBarControllers */ = {
-			isa = PBXGroup;
-			children = (
-				CEC690E928072B2E0085BC7D /* HomeTabController.swift */,
-				CEC690EB28072B3A0085BC7D /* SearchTabController.swift */,
-				CEC690ED28072B4B0085BC7D /* ReelsTabController.swift */,
-				CEC690EF28072B640085BC7D /* ShopTabController.swift */,
-				CEC690F128072B750085BC7D /* ProfileTabController.swift */,
-				CE6BFAA9280731F100D97035 /* TabBarController.swift */,
-			);
-			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 		CECC5E7C27FC9A8E00754F0E = {
@@ -227,9 +199,8 @@
 			children = (
 				CEFC62CE281E81CD00E24E5A /* Models */,
 				CE99D5AC28056CE900631200 /* Constants */,
-				CE99D5A7280569CA00631200 /* Controllers */,
 				CE99D5A6280569C300631200 /* Extensions */,
-				CE99D5A5280569BE00631200 /* Views */,
+				CE99D5A5280569BE00631200 /* Source */,
 				CECC5E8827FC9A8E00754F0E /* AppDelegate.swift */,
 				CECC5E8A27FC9A8E00754F0E /* SceneDelegate.swift */,
 				CECC5E9127FC9A8E00754F0E /* Assets.xcassets */,
@@ -244,6 +215,7 @@
 			children = (
 				CEFC62BA281E6B5800E24E5A /* HomeCells */,
 				CEC690DD280724A80085BC7D /* HomeTab.storyboard */,
+				CEC690E928072B2E0085BC7D /* HomeTabController.swift */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -261,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC690DF280724E20085BC7D /* SearchTab.storyboard */,
+				CEC690EB28072B3A0085BC7D /* SearchTabController.swift */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -269,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC690E1280726B20085BC7D /* ReelsTab.storyboard */,
+				CEC690ED28072B4B0085BC7D /* ReelsTabController.swift */,
 			);
 			path = ReelsTab;
 			sourceTree = "<group>";
@@ -277,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC690E3280726D30085BC7D /* ShopTab.storyboard */,
+				CEC690EF28072B640085BC7D /* ShopTabController.swift */,
 			);
 			path = ShopTab;
 			sourceTree = "<group>";
@@ -285,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC690E5280726E40085BC7D /* ProfileTab.storyboard */,
+				CEC690F128072B750085BC7D /* ProfileTabController.swift */,
 			);
 			path = ProfileTab;
 			sourceTree = "<group>";
