@@ -78,7 +78,6 @@
                             <constraint firstItem="JcU-kL-YMS" firstAttribute="top" secondItem="NwH-BT-UPG" secondAttribute="bottom" constant="4" id="wDK-Ru-Uru"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icn_home" selectedImage="icn_home_selected" id="C1Z-1g-Dep"/>
                     <connections>
                         <outlet property="tableView" destination="JcU-kL-YMS" id="tCO-M8-bkC"/>
                     </connections>
@@ -90,8 +89,6 @@
     </scenes>
     <resources>
         <image name="icn_add" width="24" height="24"/>
-        <image name="icn_home" width="24" height="24"/>
-        <image name="icn_home_selected" width="24" height="24"/>
         <image name="icn_share" width="24" height="24"/>
         <image name="icn_unlike" width="24" height="24"/>
         <image name="logo_instagram_small" width="96" height="27"/>
