@@ -29,12 +29,9 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeCountLabel: UILabel!
-    @IBOutlet weak var captionWriterNameLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var commentCountButton: UIButton!
-    
-    @IBOutlet weak var captionLabelWidth: NSLayoutConstraint!
-    
+        
     //MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,16 +44,19 @@ class FeedTableViewCell: UITableViewCell {
         profileNameLabel.text = feedData.profileName
         feedImageView.image = UIImage(named: feedData.feedImageName)
         likeCountLabel.text = "좋아요 \(feedData.likeCount)개"
-        captionWriterNameLabel.text = feedData.profileName
-        captionLabel.text = feedData.caption
+        captionLabel.attributedText = attributedCaptionText(username: feedData.profileName, caption: feedData.caption)
         commentCountButton.setTitle("댓글 \(feedData.commentCount)개 모두 보기", for: .normal)
+    }
+    
+    func attributedCaptionText(username: String, caption: String) -> NSAttributedString {
+        let attributedText = NSMutableAttributedString(string: "\(username) ", attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .medium)])
+        attributedText.append(NSAttributedString(string: caption, attributes: [.font: UIFont.systemFont(ofSize: 10)]))
         
-        captionLabelWidth.constant = UIScreen.main.bounds.width - (captionWriterNameLabel.intrinsicContentSize.width + 12 + 4 + 12)
+        return attributedText
     }
     
     //MARK: - Actions
     @IBAction func likeButtonDidTap(_ sender: UIButton) {
         delegate?.cell(self, wantsToLike: !sender.isSelected)
     }
-    
 }
