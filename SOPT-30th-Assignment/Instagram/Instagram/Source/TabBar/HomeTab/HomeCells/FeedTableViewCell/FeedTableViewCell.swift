@@ -79,7 +79,11 @@ class FeedTableViewCell: UITableViewCell {
     
     
     @IBAction func pageControlDidTap(_ sender: UIPageControl) {
-        print(sender)
+        let page = sender.currentPage
+        var frame = collectionView.frame
+        frame.origin.x = frame.size.width * CGFloat(page)
+        frame.origin.y = 0
+        collectionView.scrollRectToVisible(frame, animated: true)
     }
     
     
@@ -88,8 +92,9 @@ class FeedTableViewCell: UITableViewCell {
 extension FeedTableViewCell: UICollectionViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let page = Int(targetContentOffset.pointee.x / self.frame.width)
-            self.pageControl.currentPage = page
+        pageControl.currentPage = page
     }
+
 }
 
 extension FeedTableViewCell: UICollectionViewDataSource {
@@ -109,7 +114,9 @@ extension FeedTableViewCell: UICollectionViewDataSource {
 extension FeedTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 375, height: 340)
+        let width = UIScreen.main.bounds.width
+        let height = width * (340/375)
+        return CGSize(width: width, height: 340)
     }
     
     // 콜렉션뷰 전체의 패딩값
