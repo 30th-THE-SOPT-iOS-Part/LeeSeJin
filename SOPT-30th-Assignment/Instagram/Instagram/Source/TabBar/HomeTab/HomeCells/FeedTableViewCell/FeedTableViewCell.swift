@@ -62,6 +62,7 @@ class FeedTableViewCell: UITableViewCell {
         captionLabel.attributedText = attributedCaptionText(username: feedData.profileName, caption: feedData.caption)
         commentCountButton.setTitle("댓글 \(feedData.commentCount)개 모두 보기", for: .normal)
         
+        collectionView.reloadData()
         pageControl.numberOfPages = feedData.feedImageName.count
     }
     
@@ -77,7 +78,7 @@ class FeedTableViewCell: UITableViewCell {
         delegate?.cell(self, wantsToLike: !sender.isSelected)
     }
     
-    
+    // pageControl을 터치하면 해당 위치로 collectionView(scrollView) 이동
     @IBAction func pageControlDidTap(_ sender: UIPageControl) {
         let page = sender.currentPage
         var frame = collectionView.frame
@@ -85,11 +86,11 @@ class FeedTableViewCell: UITableViewCell {
         frame.origin.y = 0
         collectionView.scrollRectToVisible(frame, animated: true)
     }
-    
-    
 }
 
+//MARK: - UICollectionViewDelegate
 extension FeedTableViewCell: UICollectionViewDelegate {
+    // feed collectionView를 스크롤하면 pageControl도 알맞은 위치로 변경
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let page = Int(targetContentOffset.pointee.x / self.frame.width)
         pageControl.currentPage = page
@@ -97,6 +98,7 @@ extension FeedTableViewCell: UICollectionViewDelegate {
 
 }
 
+//MARK: - UICollectionViewDataSource
 extension FeedTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return model?.feedImageName.count ?? 1
@@ -107,16 +109,16 @@ extension FeedTableViewCell: UICollectionViewDataSource {
         cell.setData(feedImage: (model?.feedImageName[indexPath.row])!)
         return cell
     }
-    
-    
 }
 
+
+//MARK: - UICollectionViewDelegateFlowLayout
 extension FeedTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width
         let height = width * (340/375)
-        return CGSize(width: width, height: 340)
+        return CGSize(width: width, height: height)
     }
     
     // 콜렉션뷰 전체의 패딩값
