@@ -49,9 +49,8 @@ extension StoryTableViewCell: UICollectionViewDataSource {
         cell.setData(storyData: StoryDataModel.sampleData[indexPath.row])
         return cell
     }
-    
-    
 }
+
 
 //MARK: - UICollectionViewDelegateFlowLayout
 extension StoryTableViewCell: UICollectionViewDelegateFlowLayout {

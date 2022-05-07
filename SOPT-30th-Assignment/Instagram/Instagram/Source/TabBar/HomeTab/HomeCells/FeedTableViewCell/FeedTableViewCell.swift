@@ -26,7 +26,11 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
-    @IBOutlet weak var feedImageView: UIImageView!
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
@@ -35,17 +39,30 @@ class FeedTableViewCell: UITableViewCell {
     //MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        setDelegate()
+        configureCollectionView()
     }
 
     //MARK: - Helpers
+    func setDelegate() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    func configureCollectionView() {
+        let nib = UINib(nibName: FeedImageCollectionViewCell.identifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: FeedImageCollectionViewCell.identifier)
+    }
 
     func setData(feedData: FeedDataModel) {
         profileImageView.image = UIImage(named: feedData.profileImageName)
         profileNameLabel.text = feedData.profileName
-        feedImageView.image = UIImage(named: feedData.feedImageName)
+        
         likeCountLabel.text = "좋아요 \(feedData.likeCount)개"
         captionLabel.attributedText = attributedCaptionText(username: feedData.profileName, caption: feedData.caption)
         commentCountButton.setTitle("댓글 \(feedData.commentCount)개 모두 보기", for: .normal)
+        
+        pageControl.numberOfPages = feedData.feedImageName.count
     }
     
     func attributedCaptionText(username: String, caption: String) -> NSAttributedString {
@@ -58,5 +75,51 @@ class FeedTableViewCell: UITableViewCell {
     //MARK: - Actions
     @IBAction func likeButtonDidTap(_ sender: UIButton) {
         delegate?.cell(self, wantsToLike: !sender.isSelected)
+    }
+    
+    
+    @IBAction func pageControlDidTap(_ sender: UIPageControl) {
+        print(sender)
+    }
+    
+    
+}
+
+extension FeedTableViewCell: UICollectionViewDelegate {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let page = Int(targetContentOffset.pointee.x / self.frame.width)
+            self.pageControl.currentPage = page
+    }
+}
+
+extension FeedTableViewCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return model?.feedImageName.count ?? 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedImageCollectionViewCell.identifier, for: indexPath) as? FeedImageCollectionViewCell else { return UICollectionViewCell() }
+        cell.setData(feedImage: (model?.feedImageName[indexPath.row])!)
+        return cell
+    }
+    
+    
+}
+
+extension FeedTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 375, height: 340)
+    }
+    
+    // 콜렉션뷰 전체의 패딩값
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    
+    // Cell간의 좌우간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }

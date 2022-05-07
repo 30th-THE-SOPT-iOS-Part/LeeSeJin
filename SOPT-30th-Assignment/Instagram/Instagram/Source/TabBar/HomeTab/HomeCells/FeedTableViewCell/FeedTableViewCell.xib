@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -57,9 +59,6 @@
                             <constraint firstItem="c5t-lL-Tk6" firstAttribute="leading" secondItem="XkD-1v-Ggn" secondAttribute="trailing" constant="6" id="yBY-7c-uQE"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-QR-zkc">
-                        <rect key="frame" x="0.0" y="46" width="375" height="339.5"/>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xks-Ip-5Ta">
                         <rect key="frame" x="10" y="393.5" width="92" height="24"/>
                         <subviews>
@@ -128,22 +127,45 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-Fp-vED">
+                        <rect key="frame" x="0.0" y="46" width="375" height="339.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="339.5" id="gdt-Mx-CrD"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m51-VD-cf1">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PyL-L2-hQt">
+                        <rect key="frame" x="130" y="392.5" width="115.5" height="26"/>
+                        <color key="pageIndicatorTintColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                        <connections>
+                            <action selector="pageControlDidTap:" destination="KGk-i7-Jjw" eventType="valueChanged" id="uQG-lN-r3e"/>
+                        </connections>
+                    </pageControl>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="dWn-TZ-9hh" firstAttribute="top" secondItem="h3B-QR-zkc" secondAttribute="bottom" constant="8" id="2Gt-Tl-J1C"/>
+                    <constraint firstItem="Xks-Ip-5Ta" firstAttribute="top" secondItem="nR4-Fp-vED" secondAttribute="bottom" constant="8" id="0aO-fx-b2g"/>
+                    <constraint firstItem="PyL-L2-hQt" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="3l6-Dj-06k"/>
                     <constraint firstItem="YLC-hY-IL4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="4ta-Pu-DSQ"/>
                     <constraint firstAttribute="trailing" secondItem="P0T-jD-thI" secondAttribute="trailing" constant="12" id="5Na-0D-vDI"/>
                     <constraint firstAttribute="bottom" secondItem="YLC-hY-IL4" secondAttribute="bottom" constant="12" id="68N-eZ-a8H"/>
                     <constraint firstItem="aGk-CX-gfg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CGA-Z2-dIZ"/>
                     <constraint firstItem="qEz-Zd-uj0" firstAttribute="top" secondItem="Xks-Ip-5Ta" secondAttribute="bottom" constant="10" id="DP6-mt-KeM"/>
+                    <constraint firstItem="nR4-Fp-vED" firstAttribute="top" secondItem="aGk-CX-gfg" secondAttribute="bottom" id="F9e-9v-xMk"/>
+                    <constraint firstAttribute="trailing" secondItem="nR4-Fp-vED" secondAttribute="trailing" id="Gse-de-eQo"/>
+                    <constraint firstItem="dWn-TZ-9hh" firstAttribute="top" secondItem="nR4-Fp-vED" secondAttribute="bottom" constant="8" id="Hog-hm-wd0"/>
                     <constraint firstAttribute="trailing" secondItem="aGk-CX-gfg" secondAttribute="trailing" id="Hs1-E9-HQc"/>
-                    <constraint firstItem="Xks-Ip-5Ta" firstAttribute="top" secondItem="h3B-QR-zkc" secondAttribute="bottom" constant="8" id="PIv-5I-rHR"/>
-                    <constraint firstItem="h3B-QR-zkc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YbW-xy-hN5"/>
                     <constraint firstItem="P0T-jD-thI" firstAttribute="top" secondItem="qEz-Zd-uj0" secondAttribute="bottom" constant="6" id="bzI-4e-FWi"/>
-                    <constraint firstItem="h3B-QR-zkc" firstAttribute="top" secondItem="aGk-CX-gfg" secondAttribute="bottom" id="cfr-kc-8Ps"/>
+                    <constraint firstItem="nR4-Fp-vED" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dOu-KT-7Bb"/>
+                    <constraint firstItem="PyL-L2-hQt" firstAttribute="centerY" secondItem="Xks-Ip-5Ta" secondAttribute="centerY" id="e9N-nk-90o"/>
                     <constraint firstItem="YLC-hY-IL4" firstAttribute="top" secondItem="P0T-jD-thI" secondAttribute="bottom" constant="4" id="g6N-6V-qpt"/>
                     <constraint firstAttribute="trailing" secondItem="dWn-TZ-9hh" secondAttribute="trailing" constant="10" id="hPR-m2-cKb"/>
-                    <constraint firstAttribute="trailing" secondItem="h3B-QR-zkc" secondAttribute="trailing" id="hSc-qa-bwZ"/>
                     <constraint firstItem="P0T-jD-thI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="iTM-yo-bLD"/>
                     <constraint firstItem="aGk-CX-gfg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xQg-e9-CAL"/>
                     <constraint firstItem="qEz-Zd-uj0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="xh5-Hb-H6r"/>
@@ -153,10 +175,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="P0T-jD-thI" id="VAV-IA-axi"/>
+                <outlet property="collectionView" destination="nR4-Fp-vED" id="KPH-nG-xhv"/>
                 <outlet property="commentCountButton" destination="YLC-hY-IL4" id="9gf-qA-C6h"/>
-                <outlet property="feedImageView" destination="h3B-QR-zkc" id="VK5-4S-ylh"/>
                 <outlet property="likeButton" destination="vE9-KR-Jb9" id="1EY-7c-Sxq"/>
                 <outlet property="likeCountLabel" destination="qEz-Zd-uj0" id="nyr-ho-oC9"/>
+                <outlet property="pageControl" destination="PyL-L2-hQt" id="hYq-Fh-aok"/>
                 <outlet property="profileImageView" destination="XkD-1v-Ggn" id="vAK-c7-0kD"/>
                 <outlet property="profileNameLabel" destination="c5t-lL-Tk6" id="S6T-wV-L7p"/>
             </connections>
@@ -170,5 +193,11 @@
         <image name="icn_more" width="24" height="24"/>
         <image name="icn_share" width="24" height="24"/>
         <image name="icn_unlike" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
