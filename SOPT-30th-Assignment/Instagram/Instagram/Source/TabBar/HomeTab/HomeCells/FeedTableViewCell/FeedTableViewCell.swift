@@ -105,8 +105,8 @@ extension FeedTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedImageCollectionViewCell.identifier, for: indexPath) as? FeedImageCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(feedImage: (model?.feedImageName[indexPath.row])!)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedImageCollectionViewCell.identifier, for: indexPath) as? FeedImageCollectionViewCell, let feedImageName = model?.feedImageName[indexPath.row] else { return UICollectionViewCell() }
+        cell.setData(feedImage: feedImageName)
         return cell
     }
 }
