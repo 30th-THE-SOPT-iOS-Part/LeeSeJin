@@ -12,7 +12,7 @@
 		CE3C1851282C0DA900339F8F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1850282C0DA900339F8F /* NetworkResult.swift */; };
 		CE3C1854282C0E9500339F8F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1853282C0E9500339F8F /* UserService.swift */; };
 		CE3C1857282C121D00339F8F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1856282C121D00339F8F /* LoginModel.swift */; };
-		CE3C1859282C22B200339F8F /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1858282C22B200339F8F /* SignUpResponse.swift */; };
+		CE3C1859282C22B200339F8F /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1858282C22B200339F8F /* SignUpModel.swift */; };
 		CE3CE853281AE74B0039AC64 /* NSObject++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE852281AE74B0039AC64 /* NSObject++.swift */; };
 		CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BFAA9280731F100D97035 /* TabBarController.swift */; };
 		CE829F312806EC3000B32953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE829F302806EC3000B32953 /* MainViewController.swift */; };
@@ -64,7 +64,7 @@
 		CE3C1850282C0DA900339F8F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		CE3C1853282C0E9500339F8F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CE3C1856282C121D00339F8F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		CE3C1858282C22B200339F8F /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		CE3C1858282C22B200339F8F /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		CE3CE852281AE74B0039AC64 /* NSObject++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject++.swift"; sourceTree = "<group>"; };
 		CE6BFAA9280731F100D97035 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE829F302806EC3000B32953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3C1856282C121D00339F8F /* LoginModel.swift */,
-				CE3C1858282C22B200339F8F /* SignUpResponse.swift */,
+				CE3C1858282C22B200339F8F /* SignUpModel.swift */,
 			);
 			path = ServiceModels;
 			sourceTree = "<group>";
@@ -525,7 +525,7 @@
 				CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */,
 				CEFC62B8281E652500E24E5A /* UIViewController++.swift in Sources */,
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
-				CE3C1859282C22B200339F8F /* SignUpResponse.swift in Sources */,
+				CE3C1859282C22B200339F8F /* SignUpModel.swift in Sources */,
 				CEFC62CC281E7F6C00E24E5A /* StoryCollectionViewCell.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
 				CE3C1851282C0DA900339F8F /* NetworkResult.swift in Sources */,
