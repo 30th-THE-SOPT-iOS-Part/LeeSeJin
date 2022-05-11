@@ -44,3 +44,7 @@ class LoginConfirmController: UIViewController {
     }
 }
 
+//MARK: - UserService
+extension LoginConfirmController {
+    
+}
