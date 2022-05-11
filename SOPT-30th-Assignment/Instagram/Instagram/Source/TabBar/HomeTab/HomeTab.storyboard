@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Tab Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeTabController" id="Y6W-OH-hqX" customClass="HomeTabController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwH-BT-UPG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_instagram_small" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-io-gUQ">
+                                        <rect key="frame" x="14" y="9" width="96" height="27"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="46a-Mk-aHy">
+                                        <rect key="frame" x="296" y="11" width="104" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-R7-0tL">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icn_add"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfF-Jv-mgm">
+                                                <rect key="frame" x="40" y="0.0" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icn_unlike"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-Ad-eFe">
+                                                <rect key="frame" x="80" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="DRW-Tn-ESH"/>
+                                                    <constraint firstAttribute="width" constant="24" id="wEO-4z-xsE"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icn_share"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NfF-Jv-mgm" firstAttribute="height" secondItem="EDe-Ad-eFe" secondAttribute="height" id="HIH-s9-dGA"/>
+                                            <constraint firstItem="DC9-R7-0tL" firstAttribute="width" secondItem="EDe-Ad-eFe" secondAttribute="width" id="gG4-2A-Dv0"/>
+                                            <constraint firstItem="NfF-Jv-mgm" firstAttribute="width" secondItem="EDe-Ad-eFe" secondAttribute="width" id="w9p-as-NKG"/>
+                                            <constraint firstItem="DC9-R7-0tL" firstAttribute="height" secondItem="EDe-Ad-eFe" secondAttribute="height" id="zDZ-Be-bCW"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="46a-Mk-aHy" firstAttribute="top" secondItem="NwH-BT-UPG" secondAttribute="top" constant="11" id="0iB-gK-QFz"/>
+                                    <constraint firstAttribute="trailing" secondItem="46a-Mk-aHy" secondAttribute="trailing" constant="14" id="BPR-UA-Zpu"/>
+                                    <constraint firstItem="fm8-io-gUQ" firstAttribute="top" secondItem="NwH-BT-UPG" secondAttribute="top" constant="9" id="Cdd-7P-Bla"/>
+                                    <constraint firstAttribute="height" constant="44" id="Jmk-sd-QXR"/>
+                                    <constraint firstItem="fm8-io-gUQ" firstAttribute="leading" secondItem="NwH-BT-UPG" secondAttribute="leading" constant="14" id="Sep-LC-Qaj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JcU-kL-YMS">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NwH-BT-UPG" secondAttribute="trailing" id="FgW-G0-nxd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JcU-kL-YMS" secondAttribute="bottom" id="QRu-dO-M1o"/>
+                            <constraint firstItem="JcU-kL-YMS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WDx-gQ-14X"/>
+                            <constraint firstItem="NwH-BT-UPG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Yoo-PF-eH8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JcU-kL-YMS" secondAttribute="trailing" id="n3w-2O-qXC"/>
+                            <constraint firstItem="NwH-BT-UPG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="nal-sf-HL9"/>
+                            <constraint firstItem="JcU-kL-YMS" firstAttribute="top" secondItem="NwH-BT-UPG" secondAttribute="bottom" constant="4" id="wDK-Ru-Uru"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JcU-kL-YMS" id="tCO-M8-bkC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334.78260869565219" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icn_add" width="24" height="24"/>
+        <image name="icn_share" width="24" height="24"/>
+        <image name="icn_unlike" width="24" height="24"/>
+        <image name="logo_instagram_small" width="96" height="27"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
