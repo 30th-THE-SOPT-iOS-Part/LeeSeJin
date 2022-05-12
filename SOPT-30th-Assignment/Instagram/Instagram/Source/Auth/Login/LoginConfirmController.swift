@@ -47,16 +47,16 @@ extension LoginConfirmController {
         
         UserService.shared.signUp(name: name, email: email, password: password) { respose in
             switch respose {
-            case .success(let data):
-                guard let _ = data as? SignUpResponse else { return }
+            case .success(_):
                 self.alert(withTitle: "회원가입 성공", message: "Instagram에 오신 것을 환영합니다.") { _ in
-                    self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true)
                 }
-            case .requestErr(let error):
-                print(error)
-            case .pathErr(let error):
-                let errorMessage = String(describing: error)
-                self.alert(withTitle: "회원가입 실패", message: errorMessage, completion: {_ in})
+            case .requestErr(_):
+                self.alert(withTitle: "회원 가입 실패", message: "이미 등록된 유저가 존재합니다.") { _ in
+                    self.dismiss(animated: true)
+                }
+            case .pathErr:
+                self.alert(withTitle: "회원가입 실패", message: "Can not decode...")
             case .serverErr:
                 print("serverError")
             case .networkFail:

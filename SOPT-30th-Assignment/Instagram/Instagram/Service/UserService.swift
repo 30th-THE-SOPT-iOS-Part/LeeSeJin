@@ -34,7 +34,7 @@ struct UserService {
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 
-                let networkResult = self.judgeStatus(by: statusCode, isLogin: true, value)
+                let networkResult = self.parseJSON(by: statusCode, data: value, type: LoginResponse.self)
                 completion(networkResult)
             
             // 실패 시 networkFail(통신 실패)신호 전달
@@ -65,7 +65,7 @@ struct UserService {
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 
-                let networkResult = self.judgeStatus(by: statusCode, isLogin: false, value)
+                let networkResult = self.parseJSON(by: statusCode, data: value, type: SignUpResponse.self)
                 completion(networkResult)
                 
             // 실패 시 networkFail(통신 실패)신호 전달
@@ -77,29 +77,22 @@ struct UserService {
     }
     
     
-    // 상태 코드와 값(value, data)를 가지고 통신의 결과를 핸들링하는 함수입니다.
-    private func judgeStatus(by statusCode: Int, isLogin: Bool, _ data: Data) -> NetworkResult<Any> {
+    // 상태 코드와 데이터, decoding type을 가지고 통신의 결과를 핸들링하는 함수
+    private func parseJSON<T: Codable> (by statusCode: Int, data: Data, type: T.Type) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+
+        guard let decodedData = try? decoder.decode(type.self, from: data) else { return .pathErr }
+        
         switch statusCode {
         // 성공 시에는 넘겨받은 데이터를 decode(해독)하는 함수를 호출합니다.
-        case 200: return decodeValidData(data: data, isLogin: isLogin)
-        case 201: return decodeValidData(data: data, isLogin: isLogin)
-        case 404: return .pathErr("이메일에 해당하는 사용자 정보가 없습니다.")
-        case 409: return isLogin ? .pathErr("비밀 번호가 올바르지 않습니다.") : .pathErr("유저 정보 중복")
+        case 200..<300: return .success(decodedData)
+        case 400..<500: return .requestErr(decodedData)
         case 500..<600: return .serverErr
         default: return .networkFail
         }
     }
     
-    private func decodeValidData(data: Data, isLogin: Bool) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
-        if isLogin {
-            guard let decodedData = try? decoder.decode(LoginResponse.self, from: data) else { return .pathErr("Can not decode") }
-            return .success(decodedData as Any)
-        } else {
-            guard let decodedData = try? decoder.decode(SignUpResponse.self, from: data) else { return .pathErr("Can not decode") }
-            return .success(decodedData as Any)
-        }
-    }
+
 }
 
 

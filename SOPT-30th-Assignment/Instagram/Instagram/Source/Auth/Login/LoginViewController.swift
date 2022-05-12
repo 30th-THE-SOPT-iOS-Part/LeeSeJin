@@ -94,11 +94,16 @@ extension LoginViewController {
                     }
                 }
                 
-            case .requestErr(let error):
-                print(error)
-            case .pathErr(let error):
-                let errorMessage = String(describing: error)
-                self.alert(withTitle: "로그인 실패", message: errorMessage, completion: {_ in})
+            case .requestErr(let data):
+                guard let data = data as? LoginResponse else { return }
+                let statusCode = data.status
+                if statusCode == 404 {
+                    self.alert(withTitle: "로그인 실패", message: "이메일에 해당하는 사용자 정보가 없습니다.")
+                } else {
+                    self.alert(withTitle: "로그인 실패", message: "잘못된 비밀번호입니다.")
+                }
+            case .pathErr:
+                self.alert(withTitle: "로그인 실패", message: "Can not decode...")
             case .serverErr:
                 print("serverError")
             case .networkFail:
