@@ -7,16 +7,6 @@
 
 import Foundation
 
-//struct ImageResponse: Codable {
-//    var images: ImageData
-//    
-//    init(from decoder: Decoder) throws {
-//        var container = try decoder.unkeyedContainer()
-//        images = try container.decode(ImageData.self)
-//    }
-//}
-
-
 struct ImageData: Codable {
     let id: String
     let author: String
