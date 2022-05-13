@@ -11,6 +11,11 @@ class HomeTabController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Properties
+    private var feeds = [FeedDataModel]() {
+        didSet { tableView.reloadData() }
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {        
         super.viewDidLoad()
@@ -18,6 +23,7 @@ class HomeTabController: UIViewController {
         
         setDelegate()
         configureTableView()
+        getImages()
     }
     
     //MARK: - Helpers
@@ -42,17 +48,6 @@ class HomeTabController: UIViewController {
 
 //MARK: - UITableViewDelegate
 extension HomeTabController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.section {
-//        case 0:
-//            return 80
-//        case 1:
-//            return 500
-//        default:
-//            return 0
-//        }
-//    }
-    
 }
 
 //MARK: - UITableViewDataSource
@@ -95,6 +90,23 @@ extension HomeTabController: FeedTableViewCellDelegate {
             cell.model?.likeCount += 1
         } else {
             cell.model?.likeCount -= 1
+        }
+    }
+}
+
+
+//MARK: - API
+extension HomeTabController {
+    func getImages() {
+        ImageService.shared.getImages { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? [ImageData] else { return }
+                print(data)
+            default:
+                print("DEBUG: Fail to get images...")
+                return
+            }
         }
     }
 }

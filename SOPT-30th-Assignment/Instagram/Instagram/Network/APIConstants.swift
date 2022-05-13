@@ -10,9 +10,11 @@ import Foundation
 
 struct APIConstants {
     //MARK: - Base URL
-    static let baseURL = "http://13.124.62.236"
+    static let authBaseURL = "http://13.124.62.236"
+    static let imageBaseURL = "https://picsum.photos/v2/list"
     
     //MARK: - Fearture URL
-    static let loginURL = baseURL + "/auth/signin"
-    static let signUpURL = baseURL + "/auth/signup"
+    static let loginURL = authBaseURL + "/auth/signin"
+    static let signUpURL = authBaseURL + "/auth/signup"
+        
 }

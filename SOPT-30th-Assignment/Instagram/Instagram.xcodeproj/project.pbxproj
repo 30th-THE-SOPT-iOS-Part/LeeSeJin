@@ -14,6 +14,9 @@
 		CE3C1857282C121D00339F8F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1856282C121D00339F8F /* LoginModel.swift */; };
 		CE3C1859282C22B200339F8F /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1858282C22B200339F8F /* SignUpModel.swift */; };
 		CE3CE853281AE74B0039AC64 /* NSObject++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE852281AE74B0039AC64 /* NSObject++.swift */; };
+		CE4AD12C282EAB5E008A03F4 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD12B282EAB5E008A03F4 /* ImageModel.swift */; };
+		CE4AD12E282EAC88008A03F4 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD12D282EAC88008A03F4 /* ImageService.swift */; };
+		CE4AD130282EB06F008A03F4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD12F282EB06F008A03F4 /* NetworkHelper.swift */; };
 		CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BFAA9280731F100D97035 /* TabBarController.swift */; };
 		CE829F312806EC3000B32953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE829F302806EC3000B32953 /* MainViewController.swift */; };
 		CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */; };
@@ -66,6 +69,9 @@
 		CE3C1856282C121D00339F8F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		CE3C1858282C22B200339F8F /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		CE3CE852281AE74B0039AC64 /* NSObject++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject++.swift"; sourceTree = "<group>"; };
+		CE4AD12B282EAB5E008A03F4 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		CE4AD12D282EAC88008A03F4 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		CE4AD12F282EB06F008A03F4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		CE6BFAA9280731F100D97035 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE829F302806EC3000B32953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistrationController.swift; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 			children = (
 				CE3C184E282C0D4F00339F8F /* APIConstants.swift */,
 				CE3C1850282C0DA900339F8F /* NetworkResult.swift */,
+				CE4AD12F282EB06F008A03F4 /* NetworkHelper.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3C1853282C0E9500339F8F /* UserService.swift */,
+				CE4AD12D282EAC88008A03F4 /* ImageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -150,10 +158,27 @@
 		CE3C1855282C11EF00339F8F /* ServiceModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE4AD12A282EAAAF008A03F4 /* ImageServiceModel */,
+				CE4AD129282EAAA6008A03F4 /* AuthServiceModel */,
+			);
+			path = ServiceModels;
+			sourceTree = "<group>";
+		};
+		CE4AD129282EAAA6008A03F4 /* AuthServiceModel */ = {
+			isa = PBXGroup;
+			children = (
 				CE3C1856282C121D00339F8F /* LoginModel.swift */,
 				CE3C1858282C22B200339F8F /* SignUpModel.swift */,
 			);
-			path = ServiceModels;
+			path = AuthServiceModel;
+			sourceTree = "<group>";
+		};
+		CE4AD12A282EAAAF008A03F4 /* ImageServiceModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE4AD12B282EAB5E008A03F4 /* ImageModel.swift */,
+			);
+			path = ImageServiceModel;
 			sourceTree = "<group>";
 		};
 		CE99D5A5280569BE00631200 /* Source */ = {
@@ -512,12 +537,14 @@
 				CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */,
 				CEFC62D0281E81E500E24E5A /* StoryDataModel.swift in Sources */,
 				CEC690F228072B750085BC7D /* ProfileTabController.swift in Sources */,
+				CE4AD130282EB06F008A03F4 /* NetworkHelper.swift in Sources */,
 				CEC690EA28072B2E0085BC7D /* HomeTabController.swift in Sources */,
 				CE3C184F282C0D4F00339F8F /* APIConstants.swift in Sources */,
 				CEC690EC28072B3A0085BC7D /* SearchTabController.swift in Sources */,
 				CE99D5BB28059F1900631200 /* Color.swift in Sources */,
 				CEC690EE28072B4B0085BC7D /* ReelsTabController.swift in Sources */,
 				CE99D5A928056A6900631200 /* UITextField++.swift in Sources */,
+				CE4AD12E282EAC88008A03F4 /* ImageService.swift in Sources */,
 				CE3C1857282C121D00339F8F /* LoginModel.swift in Sources */,
 				CEC690F028072B640085BC7D /* ShopTabController.swift in Sources */,
 				CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */,
@@ -527,6 +554,7 @@
 				CECC5E8927FC9A8E00754F0E /* AppDelegate.swift in Sources */,
 				CE3C1859282C22B200339F8F /* SignUpModel.swift in Sources */,
 				CEFC62CC281E7F6C00E24E5A /* StoryCollectionViewCell.swift in Sources */,
+				CE4AD12C282EAB5E008A03F4 /* ImageModel.swift in Sources */,
 				CECC5E8B27FC9A8E00754F0E /* SceneDelegate.swift in Sources */,
 				CE3C1851282C0DA900339F8F /* NetworkResult.swift in Sources */,
 				CEFE640227FCA42F00395565 /* UIButton++.swift in Sources */,
