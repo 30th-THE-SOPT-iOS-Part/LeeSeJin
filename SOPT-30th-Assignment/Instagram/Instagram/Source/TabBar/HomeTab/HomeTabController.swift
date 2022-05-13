@@ -41,7 +41,6 @@ class HomeTabController: UIViewController {
         tableView.estimatedRowHeight = 500
     }
     
-    //MARK: - Actions
 }
 
 //MARK: - UITableViewDelegate
@@ -72,6 +71,8 @@ extension HomeTabController: UITableViewDataSource {
             
             cell.delegate = self
             cell.model = feedDataList[indexPath.row]
+            cell.indexPath = indexPath.row
+            cell.collectionView.reloadData()
             return cell
         default:
             return UITableViewCell()
@@ -86,8 +87,14 @@ extension HomeTabController: FeedTableViewCellDelegate {
         cell.likeButton.isSelected.toggle()
         if wantsToLike {
             cell.model?.likeCount += 1
+            if let indexPath = cell.indexPath {
+                feedDataList[indexPath].likeCount += 1
+            }
         } else {
             cell.model?.likeCount -= 1
+            if let indexPath = cell.indexPath {
+                feedDataList[indexPath].likeCount -= 1
+            }
         }
     }
 }
