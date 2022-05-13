@@ -27,7 +27,7 @@ struct ImageService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = parseJSON(by: statusCode, data: value)
+                let networkResult = NetworkHelper.parseJSON(by: statusCode, data: value, type: [ImageData].self)
                 completion(networkResult)
                 
             case .failure:
@@ -35,19 +35,5 @@ struct ImageService {
             }
         }
     }
-    
-    
-    // JSON Parsing
-    func parseJSON(by statusCode: Int, data: Data) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
 
-        guard let decodedData: [ImageData] = try? decoder.decode([ImageData].self, from: data) else { return .pathErr }
-        
-        switch statusCode {
-        case 200..<300: return .success(decodedData)
-        case 400..<500: return .requestErr(decodedData)
-        case 500..<600: return .serverErr
-        default: return .networkFail
-        }
-    }
 }
