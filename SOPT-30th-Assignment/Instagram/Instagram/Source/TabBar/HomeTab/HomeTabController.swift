@@ -12,9 +12,7 @@ class HomeTabController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Properties
-    private var feeds = [FeedDataModel]() {
-        didSet { tableView.reloadData() }
-    }
+    private var feedDataList = FeedDataModel.sampleData
     
     //MARK: - Lifecycle
     override func viewDidLoad() {        
@@ -73,7 +71,7 @@ extension HomeTabController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
             
             cell.delegate = self
-            cell.model = FeedDataModel.sampleData[indexPath.row]
+            cell.model = feedDataList[indexPath.row]
             return cell
         default:
             return UITableViewCell()
@@ -102,7 +100,12 @@ extension HomeTabController {
             switch response {
             case .success(let data):
                 guard let data = data as? [ImageData] else { return }
-                print(data)
+                for index in 0...self.feedDataList.count-1 {
+                    for j in (index*3)...(index*3+2){
+                        self.feedDataList[index].feedImageName.append(data[j].download_url)
+                    }
+                }
+                self.tableView.reloadData()
             default:
                 print("DEBUG: Fail to get images...")
                 return

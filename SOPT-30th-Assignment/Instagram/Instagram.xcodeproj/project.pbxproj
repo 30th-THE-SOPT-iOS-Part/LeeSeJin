@@ -17,6 +17,7 @@
 		CE4AD12C282EAB5E008A03F4 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD12B282EAB5E008A03F4 /* ImageModel.swift */; };
 		CE4AD12E282EAC88008A03F4 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD12D282EAC88008A03F4 /* ImageService.swift */; };
 		CE4AD130282EB06F008A03F4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD12F282EB06F008A03F4 /* NetworkHelper.swift */; };
+		CE4AD132282EC5C9008A03F4 /* UIImageView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD131282EC5C9008A03F4 /* UIImageView++.swift */; };
 		CE6BFAAA280731F100D97035 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BFAA9280731F100D97035 /* TabBarController.swift */; };
 		CE829F312806EC3000B32953 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE829F302806EC3000B32953 /* MainViewController.swift */; };
 		CE96576E27FDD1C9006677CE /* NameRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */; };
@@ -72,6 +73,7 @@
 		CE4AD12B282EAB5E008A03F4 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		CE4AD12D282EAC88008A03F4 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CE4AD12F282EB06F008A03F4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		CE4AD131282EC5C9008A03F4 /* UIImageView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView++.swift"; sourceTree = "<group>"; };
 		CE6BFAA9280731F100D97035 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE829F302806EC3000B32953 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE96576D27FDD1C9006677CE /* NameRegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistrationController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				CE99D5A828056A6900631200 /* UITextField++.swift */,
 				CE3CE852281AE74B0039AC64 /* NSObject++.swift */,
 				CEFC62B7281E652500E24E5A /* UIViewController++.swift */,
+				CE4AD131282EC5C9008A03F4 /* UIImageView++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				CEFC62D2281E81EB00E24E5A /* FeedDataModel.swift in Sources */,
 				CE99D5B028056DBA00631200 /* Storyboard.swift in Sources */,
 				CEBD5FBB27FDCB8200B7CF89 /* LoginConfirmController.swift in Sources */,
+				CE4AD132282EC5C9008A03F4 /* UIImageView++.swift in Sources */,
 				CE96577027FDD876006677CE /* PasswordRegistrationController.swift in Sources */,
 				CEFC62D0281E81E500E24E5A /* StoryDataModel.swift in Sources */,
 				CEC690F228072B750085BC7D /* ProfileTabController.swift in Sources */,

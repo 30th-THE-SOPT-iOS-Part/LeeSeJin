@@ -17,7 +17,6 @@ struct NetworkHelper {
         guard let decodedData = try? decoder.decode(type.self, from: data) else { return .pathErr }
         
         switch statusCode {
-        // 성공 시에는 넘겨받은 데이터를 decode(해독)하는 함수를 호출합니다.
         case 200..<300: return .success(decodedData)
         case 400..<500: return .requestErr(decodedData)
         case 500..<600: return .serverErr
