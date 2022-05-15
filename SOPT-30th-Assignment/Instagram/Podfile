@@ -7,5 +7,6 @@ target 'Instagram' do
 
   # Pods for Instagram
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end

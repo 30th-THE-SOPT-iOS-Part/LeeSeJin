@@ -18,6 +18,7 @@ class FeedImageCollectionViewCell: UICollectionViewCell {
     }
 
     func setData(feedImage: String) {
-        feedImageView.urlToImg(feedImage)
+        guard let imageURL = URL(string: feedImage) else { return }
+        feedImageView.setImage(imageURL)
     }
 }

@@ -6,16 +6,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UIImageView {
-    func urlToImg(_ imgURL: String) {
-        let url = URL(string: imgURL)
-        if url != nil {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: url!)
-                DispatchQueue.main.async {
-                    self.image = UIImage(data: data!)
-                }
+    func setImage(_ imageURL: URL) {
+        self.kf.indicatorType = .activity
+        self.kf.setImage(with: imageURL, options: [.transition(.fade(1))]) { result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("DEBUG: setting Image failed: \(error.localizedDescription)")
             }
         }
     }
