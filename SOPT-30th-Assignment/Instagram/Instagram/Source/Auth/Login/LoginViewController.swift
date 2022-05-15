@@ -90,7 +90,7 @@ extension LoginViewController {
                         guard let uWindow = self.view.window else { return }
                         uWindow.rootViewController = tabBarController
                         uWindow.makeKey()
-                        UIView.transition(with: uWindow, duration: 0.1, options: [.transitionCrossDissolve], animations: {}, completion: nil)
+                        UIView.transition(with: uWindow, duration: 0.5, options: [.transitionCrossDissolve], animations: {}, completion: nil)
                     }
                 }
                 
