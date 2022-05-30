@@ -55,6 +55,12 @@ class LoginViewController: UIViewController {
     }
 
     
+    @IBAction func loginButtonDidTap(_ sender: UIButton) {
+        login()
+    }
+    
+    
+    
     @IBAction func signupButtonDidTap(_ sender: UIButton) {
         guard let registrationController = UIStoryboard(name: Const.Storyboard.Registration, bundle: nil).instantiateViewController(withIdentifier: NameRegistrationController.reuseIdentifier) as? NameRegistrationController else { return }
         
@@ -63,4 +69,49 @@ class LoginViewController: UIViewController {
     
 }
 
+
+//MARK: - UserService
+
+extension LoginViewController {
+    func login() {
+        guard let name = nameTextField.text else { return }
+        let email = name
+        guard let password = passwordTextField.text else { return }
+        
+        UserService.shared.login(name: name, email: email, password: password) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? LoginResponse else { return }
+                if let name = data.data?.name {
+                    self.alert(withTitle: "\(name)님 환영합니다.", message: "로그인에 성공하였습니다.") { _ in
+                        let tabBarController = TabBarController()
+                        
+                        //루트 뷰컨트롤러 변경
+                        guard let uWindow = self.view.window else { return }
+                        uWindow.rootViewController = tabBarController
+                        uWindow.makeKey()
+                        UIView.transition(with: uWindow, duration: 0.5, options: [.transitionCrossDissolve], animations: {}, completion: nil)
+                    }
+                }
+                
+            case .requestErr(let data):
+                guard let data = data as? LoginResponse else { return }
+                let statusCode = data.status
+                if statusCode == 404 {
+                    self.alert(withTitle: "로그인 실패", message: "이메일에 해당하는 사용자 정보가 없습니다.")
+                } else {
+                    self.alert(withTitle: "로그인 실패", message: "잘못된 비밀번호입니다.")
+                }
+            case .pathErr:
+                self.alert(withTitle: "로그인 실패", message: "Can not decode...")
+            case .serverErr:
+                print("serverError")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+
+
+}
 

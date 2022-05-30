@@ -33,6 +33,7 @@ class PasswordRegistrationController: UIViewController {
         guard let LoginConfirmController = UIStoryboard(name: Const.Storyboard.Login, bundle: nil).instantiateViewController(withIdentifier: LoginConfirmController.reuseIdentifier) as? LoginConfirmController else { return }
         
         LoginConfirmController.name = name
+        LoginConfirmController.password = passwordTextField.text
         LoginConfirmController.modalPresentationStyle = .fullScreen
 
         present(LoginConfirmController, animated: true) {

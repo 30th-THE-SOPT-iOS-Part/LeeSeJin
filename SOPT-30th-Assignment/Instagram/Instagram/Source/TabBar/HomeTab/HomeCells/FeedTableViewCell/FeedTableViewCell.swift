@@ -24,6 +24,8 @@ class FeedTableViewCell: UITableViewCell {
         }
     }
     
+    var indexPath: Int?
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
 
@@ -62,7 +64,6 @@ class FeedTableViewCell: UITableViewCell {
         captionLabel.attributedText = attributedCaptionText(username: feedData.profileName, caption: feedData.caption)
         commentCountButton.setTitle("댓글 \(feedData.commentCount)개 모두 보기", for: .normal)
         
-        collectionView.reloadData()
         pageControl.numberOfPages = feedData.feedImageName.count
     }
     

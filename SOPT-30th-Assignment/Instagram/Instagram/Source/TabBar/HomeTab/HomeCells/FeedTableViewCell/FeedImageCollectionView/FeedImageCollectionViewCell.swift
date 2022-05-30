@@ -15,10 +15,10 @@ class FeedImageCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func setData(feedImage: String) {
-        feedImageView.image = UIImage(named: feedImage)
+        guard let imageURL = URL(string: feedImage) else { return }
+        feedImageView.setImage(imageURL)
     }
 }
